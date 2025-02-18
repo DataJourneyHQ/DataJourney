@@ -15,7 +15,7 @@ jobs:
     - name: Vale
       uses: errata-ai/vale-action@reviewdog
       with:
-        files: sayantikabanik/DataJourney/analytics_framework/ai_modeling/*.md
+        files: all
         vale_flags: --glob=!*/*-fr/*
         filter_mode: nofilter
         reporter: github-pr-check
