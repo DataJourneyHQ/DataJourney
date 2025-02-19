@@ -28,6 +28,11 @@ DataJourney demonstrates how organizations can effectively manage and utilize da
 
 Built on open-source principles, the framework guides users through essential steps—from **identifying** goals and **selecting tools** to **testing** and **customising** workflows. With its flexible, modular design, DataJourney can be tailored to individual needs, making it an invaluable toolkit for data professionals.
 
+### 🚦 Hold on, looking to contribute?
+
+Head over to the [wiki](https://github.com/DataJourneyHQ/DataJourney/wiki/Contribute-to-DataJourney), let's make it happen together. We don't bite :)
+
+
 ### 🧱 Design Philosophy (LEGO)
 Built with additive, subtractive capabilities glued with open source.
 Each layer has a certain strength of communication inbuilt
@@ -90,6 +95,7 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_hello_world_langchain`    | Sets up a basic LangChain app as a "Hello World" example for LLMs.                                          |
 | `DJ_spanish_eng_translation`  | Performs Spanish to English translation with Deepseek-R1 (`NOTE`: Takes about ~30 secs to execute this task) |
 | `DJ_sync_dataset_trees`       | Downloads and synchronizes the `trees.csv` dataset into the project structure.                              |
+
 
 ### 🔌 About pre-commit-hooks and activating
 Just like the name suggests, pre-commit-hooks are designed to format the code based on PEP standards before committing. [More details](https://pre-commit.com/)
