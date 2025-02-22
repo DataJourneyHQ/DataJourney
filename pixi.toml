@@ -36,6 +36,8 @@ langgraph = ">=0.2.60,<0.3"
 pillow = ">=11.1.0,<12"
 transformers = ">=4.47.1,<5"
 langchain-openai = ">=0.3.3,<0.4"
+rich-click = ">=1.8.6,<2"
+tomlkit = ">=0.13.2,<0.14"
 
 [pypi-dependencies]
 mitoinstaller = "*"
@@ -49,9 +51,9 @@ langchain-deepseek = "*"
 
 [tasks]
 # operations_DJ
-GIT_TOKEN_CHECK = "os.getenv(GITHUB_TOKEN)"
-DJ_package = "pip install --editable . --use-pep517"
-DJ_pre_commit = "pre-commit install"
+GIT_TOKEN_CHECK = { cmd = "os.getenv(GITHUB_TOKEN)" }
+DJ_package = { cmd = "pip install --editable . --use-pep517" }
+DJ_pre_commit = { cmd = "pre-commit install" }
 # applications
 DJ_dagster = { cmd = "dagit -f process.py", depends-on = "DJ_package", cwd = "analytics_framework/pipeline" }
 DJ_panel_app = { cmd = "python stock_price_twilio_app.py", depends-on = "DJ_package", cwd = "analytics_framework/dashboard" }
