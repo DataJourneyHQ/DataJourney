@@ -68,7 +68,7 @@ Each layer has a certain strength of communication inbuilt
 
 ### ☕️ Quickly getting started with DataJourney
 
-- Clone DJ `git@github.com:sayantikabanik/DataJourney.git`
+- Fork the repository
 - Generate & add `GITHUB_TOKEN`, instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
   - Added requirement to run the LLM based workflows
 - Switch directory `cd DataJourney`
