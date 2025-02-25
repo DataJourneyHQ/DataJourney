@@ -75,9 +75,9 @@ Each layer has a certain strength of communication inbuilt
 - Download pixi : [prefix.dev](https://prefix.dev/)
 - Activate env: `pixi shell`
 - Install DJ framework locally `pixi run DJ_package`
-- List all the tasks: `pixi task list`
-- Execute a task from the list: `pixi run <TASK>`
-- Execute a task with verbosity enabled: `pixi run -v <TASK>`
+- List all the tasks: `pixi run DJ_list`
+- Execute a specific task from the list: `pixi run <TASK_NAME>`
+- Execute a specific task with additional logs: `pixi run -v <TASK_NAME>`
 
 ### 🏃🏽‍♀️ Active `tasks` under DJ
 
