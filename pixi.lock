@@ -10304,7 +10304,7 @@ packages:
   md5: e71f31f8cfb0a91439f2086fc8aa0461
   depends:
   - libgcc-ng >=12
-  - libxml2 >=2.12.1,<3.0.0a0
+  - libxml2 >=2.12.1,<2.14.0a0
   arch: x86_64
   platform: linux
   license: MIT
