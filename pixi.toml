@@ -38,6 +38,7 @@ transformers = ">=4.47.1,<5"
 langchain-openai = ">=0.3.3,<0.4"
 rich-click = ">=1.8.6,<2"
 tomlkit = ">=0.13.2,<0.14"
+chromadb = ">=1.0.6,<2"
 
 [pypi-dependencies]
 mitoinstaller = "*"
