@@ -32,8 +32,8 @@ collection.count()
 
 # let's query this
 results = collection.query(
-    query_texts=["apple pay and the physical credit card", "2009 macbook pro"],
-    n_results=3,
+    query_texts=["2009 macbook pro"],
+    n_results=1,
 )
 # voila mix multiple query types to arrive at the desired outcome
 print("the outcome")
