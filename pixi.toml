@@ -38,6 +38,7 @@ transformers = ">=4.47.1,<5"
 langchain-openai = ">=0.3.3,<0.4"
 rich-click = ">=1.8.6,<2"
 tomlkit = ">=0.13.2,<0.14"
+chromadb = "*"
 
 [pypi-dependencies]
 mitoinstaller = "*"
@@ -68,3 +69,5 @@ DJ_hello_world_langchain = {cmd = "python hello_world_lc.py", cwd = "analytics_f
 DJ_spanish_eng_translation = { cmd = "python demo_spanish_translation__deepseek_r1.py", cwd = "analytics_framework/ai_modeling"}
 # miscellaneous
 DJ_sync_dataset_trees = {cmd = "curl -v -o trees.csv 'https://people.sc.fsu.edu/~jburkardt/data/csv/trees.csv'", outputs = ["trees.csv"], cwd = "analytics_framework/intake/data"}
+# db
+DJ_chromadb_gen_embedding = { cmd = "python setup_chroma_vector_db.py", cwd = "analytics_framework/rag_system"}
