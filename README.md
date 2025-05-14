@@ -82,21 +82,21 @@ Each layer has a certain strength of communication inbuilt
 
 ### 🏃🏽‍♀️ Active `tasks` under DJ
 
-| **Task Name**                 | **Description**                                                                                              |
-|-------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `GIT_TOKEN_CHECK`             | Verifies the availability and validity of the Git authentication token.                                      |
-| `DJ_package`                  | Prepares and builds the Python package for the DataJourney project.                                          |
-| `DJ_pre_commit`               | Runs pre-commit hooks to ensure code quality and adherence to standards.                                     |
-| `DJ_dagster`                  | Sets up and runs a Dagster workflow for orchestration in the project.                                        |
-| `DJ_fasthtml_app`             | Executes a FastAPI-based HTML application.                                                                   |
-| `DJ_flask_app`                | Configures and runs a Flask-based application for data services.                                             |
-| `DJ_mito_app`                 | Launches the Mito application for interactive data analysis in notebooks.                                    |
-| `DJ_panel_app`                | Executes a Panel dashboard app for data visualization and analytics.                                         |
-| `DJ_llm_analysis`             | Performs analysis using large language models (LLMs) on project data.                                        |
-| `DJ_hello_world_langchain`    | Sets up a basic LangChain app as a "Hello World" example for LLMs.                                           |
+| **Task Name**                 | **Description**                                                                                  |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| `GIT_TOKEN_CHECK`             | Verifies the availability and validity of the Git authentication token.                          |
+| `DJ_package`                  | Prepares and builds the Python package for the DataJourney project.                              |
+| `DJ_pre_commit`               | Runs pre-commit hooks to ensure code quality and adherence to standards.                         |
+| `DJ_dagster`                  | Sets up and runs a Dagster workflow for orchestration in the project.                            |
+| `DJ_fasthtml_app`             | Executes a FastAPI-based HTML application.                                                       |
+| `DJ_flask_app`                | Configures and runs a Flask-based application for data services.                                 |
+| `DJ_mito_app`                 | Launches the Mito application for interactive data analysis in notebooks.                        |
+| `DJ_panel_app`                | Executes a Panel dashboard app for data visualization and analytics.                             |
+| `DJ_llm_analysis`             | Performs analysis using large language models (LLMs) on project data.                            |
+| `DJ_hello_world_langchain`    | Sets up a basic LangChain app as a "Hello World" example for LLMs.                               |
 | `DJ_spanish_eng_translation`  | Performs Spanish to English translation with Deepseek-R1 (`NOTE`: Takes about ~30 secs to execute this task) |
-| `DJ_sync_dataset_trees`       | Downloads and synchronizes the `trees.csv` dataset into the project structure.                               |
-| `DJ_chromadb_gen_embedding`   | Simple chromadb setup  for query engine for LLM applications                                                 |
+| `DJ_sync_dataset_trees`       | Downloads and synchronizes the `trees.csv` dataset into the project structure.                   |
+| `DJ_chromadb_gen_embedding`   | Query engine for LLM applications                                                                |
 
 
 ### 🔌 About pre-commit-hooks and activating
