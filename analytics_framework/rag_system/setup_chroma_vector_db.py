@@ -2,33 +2,35 @@ import chromadb
 import pandas as pd
 import numpy as np
 
-# what is happening here?
+"""
+# What's happening here?
 # 1: read the dataset
 # 2: convert to string (that's the format the db expects)
 # 3: preferably set the index and then add to the db collection / or start simple
-
-def YT_data_read_process(file_path, num_rows, col_to_process):
-    """
-    :param file_path:
-    :param num_rows:
-    :param col_to_process:
-    :return:
-    """
-    YT_comments = pd.read_csv("../intake/data/YoutubeCommentsDataSet.csv", dtype=str, nrows=100)
-    YT_comments.dropna(inplace=True)
-    YT_comments.reset_index(inplace=True)
-    documents = YT_comments['Comment'].tolist()
-    return documents, YT_comments
-    # print(YT_comments.dtypes)
+"""
 
 
-def chromdb_processing(documents, db_collection_name):
+def yt_data_read_process(file_path, num_rows, col_to_process):
     """
-    :param documents:
-    :return:
+    :param file_path: string, path to the dataset
+    :param num_rows: int, number of rows to read
+    :param col_to_process: string, single column name
+    :return: list, pre-processed data
     """
-    documents = YT_comments['Comment'].tolist()
-    print(len(documents))
+    yt_comments = pd.read_csv(file_path, dtype=str, nrows=num_rows)
+    yt_comments.dropna(inplace=True)
+    yt_comments.reset_index(inplace=True)
+    return yt_comments[col_to_process].tolist()
+
+
+def chromadb_processing(documents, db_collection_name, what_to_query, result_num=1):
+    """
+    :param documents: list,  pre-processed data
+    :param db_collection_name: str, nice name for the collection
+    :param what_to_query: str, drop your fav query text
+    :param result_num: int default set to 01
+    :return: str, query outcome based on closest vector
+    """
     metadata = []
     ids = []
 
@@ -36,9 +38,9 @@ def chromdb_processing(documents, db_collection_name):
         metadata.append({"Comment": YT_comments['Comment'][idx]})
         ids.append(str(YT_comments['index'][idx]))
 
-# the good stuff
+    # the good stuff
     chroma_client = chromadb.Client()
-    collection = chroma_client.get_or_create_collection(name="YT_comments_new")
+    collection = chroma_client.get_or_create_collection(name=db_collection_name)
     collection.add(documents=documents, ids=ids)
 
     # check the created collection
@@ -46,13 +48,23 @@ def chromdb_processing(documents, db_collection_name):
     collection.count()
 
     # let's query this
-    results = collection.query(
-        query_texts=["2009 macbook pro"],
-        n_results=1,
+    outcome = collection.query(
+        query_texts=[what_to_query],
+        n_results=result_num,
     )
-    return results
+    return outcome
+
 
 if __name__ == '__main__':
+    documents = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
+                                     100,
+                                     "Comment"
+                                     )
+    results = chromadb_processing(documents,
+                                  "YT_comments_new",
+                                  "My macbook broke",
+                                  result_num=2
+                                  )
 
     # voila mix multiple query types to arrive at the desired outcome
     print("the outcome")
