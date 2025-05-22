@@ -71,3 +71,5 @@ if __name__ == '__main__':
 
     # voila mix multiple query types to arrive at the desired outcome
     print(f"The outcome for the query text \n {results}")
+    # just the 'documents' part is interesting to us, let's scoop it out
+    print(results["documents"])
