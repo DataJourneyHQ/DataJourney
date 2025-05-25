@@ -1,6 +1,6 @@
 import os
 from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 
 # NOTE: Using GitHub models here (add your preferred token attribute)
 
@@ -36,4 +36,4 @@ def get_answer(question):
 if __name__ == "__main__":
     question = "What is LangChain and why is it useful?"
     answer = get_answer(question)
-    print("AI Speaks:", answer)
+    print("AI Speaks:\n", answer)
