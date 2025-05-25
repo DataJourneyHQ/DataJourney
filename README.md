@@ -49,22 +49,23 @@ Each layer has a certain strength of communication inbuilt
 {✨= Experimental,
 ✅ = Implemented}
 
-| Status | Workflow Description                                                                                                                     |
-|--------|------------------------------------------------------------------------------------------------------------------------------------------|
-| ✅     | `Python Packaging framework` design principles                                                                                           |
-| ✅     | `GitHub actions` configured                                                                                                              |
-| ✅     | `Vale.sh` configured at PR level                                                                                                         |
-| ✅     | `Pre-commit hooks` configured for code linting/formatting                                                                                |
-| ✅     | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                     |
-| ✅     | Environment management via [pixi](https://prefix.dev/)                                                                                   |
-| ✅     | Reading data from online sources using [intake](https://github.com/intake/intake)                                                        |
-| ✅     | Sample pipeline built using [Dagster](https://github.com/dagster-io/dagster)                                                             |
-| ✅     | Building Dashboard using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) |
-| ✅     | Exploratory data analysis (EDA) using [mito](https://www.trymito.io/)                                                                    |
-| ✅     | Web UI build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                     |
-| ✅     | Web UI re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                     |
-| ✅     | Leverage AI models to analyse data [GitHub AI models Beta](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
-| ✅     | Query engine for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                                 |
+| Status | Workflow Description                                                                                                                |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------|
+| ✅     | `Python Packaging framework` design principles                                                                                      |
+| ✅     | `GitHub actions` configured                                                                                                         |
+| ✅     | `Vale.sh` configured at PR level                                                                                                    |
+| ✅     | `Pre-commit hooks` configured for code linting/formatting                                                                           |
+| ✅     | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                |
+| ✅     | `Environment` management via [pixi](https://prefix.dev/)                                                                              |
+| ✅     | `Reading data` from online sources using [intake](https://github.com/intake/intake)                                                   |
+| ✅     | Sample `pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                        |
+| ✅     | Building `Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) |
+| ✅     | `Exploratory data analysis` (EDA) using [mito](https://www.trymito.io/)                                                               |
+| ✅     | `Web UI` build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                |
+| ✅     | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                |
+| ✅     | Leverage `AI models` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
+| ✅     | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                            |
+| ✅     | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models` |
 
 
 ### ☕️ Quickly getting started with DataJourney
@@ -82,21 +83,22 @@ Each layer has a certain strength of communication inbuilt
 
 ### 🏃🏽‍♀️ Active `tasks` under DJ
 
-| **Task Name**                 | **Description**                                                                                  |
-|-------------------------------|--------------------------------------------------------------------------------------------------|
-| `GIT_TOKEN_CHECK`             | Verifies the availability and validity of the Git authentication token.                          |
-| `DJ_package`                  | Prepares and builds the Python package for the DataJourney project.                              |
-| `DJ_pre_commit`               | Runs pre-commit hooks to ensure code quality and adherence to standards.                         |
-| `DJ_dagster`                  | Sets up and runs a Dagster workflow for orchestration in the project.                            |
-| `DJ_fasthtml_app`             | Executes a FastAPI-based HTML application.                                                       |
-| `DJ_flask_app`                | Configures and runs a Flask-based application for data services.                                 |
-| `DJ_mito_app`                 | Launches the Mito application for interactive data analysis in notebooks.                        |
-| `DJ_panel_app`                | Executes a Panel dashboard app for data visualization and analytics.                             |
-| `DJ_llm_analysis`             | Performs analysis using large language models (LLMs) on project data.                            |
-| `DJ_hello_world_langchain`    | Sets up a basic LangChain app as a "Hello World" example for LLMs.                               |
-| `DJ_spanish_eng_translation`  | Performs Spanish to English translation with Deepseek-R1 (`NOTE`: Takes about ~30 secs to execute this task) |
-| `DJ_sync_dataset_trees`       | Downloads and synchronizes the `trees.csv` dataset into the project structure.                   |
-| `DJ_chromadb_gen_embedding`   | Query engine for LLM applications                                                                |
+| **Task Name**                | **Description**                                                                                              |
+|------------------------------|--------------------------------------------------------------------------------------------------------------|
+| `GIT_TOKEN_CHECK`            | Verifies the availability and validity of the Git authentication token.                                      |
+| `DJ_package`                 | Prepares and builds the Python package for the DataJourney project.                                          |
+| `DJ_pre_commit`              | Runs pre-commit hooks to ensure code quality and adherence to standards.                                     |
+| `DJ_dagster`                 | Sets up and runs a Dagster workflow for orchestration in the project.                                        |
+| `DJ_fasthtml_app`            | Executes a FastAPI-based HTML application.                                                                   |
+| `DJ_flask_app`               | Configures and runs a Flask-based application for data services.                                             |
+| `DJ_mito_app`                | Launches the Mito application for interactive data analysis in notebooks.                                    |
+| `DJ_panel_app`               | Executes a Panel dashboard app for data visualization and analytics.                                         |
+| `DJ_llm_analysis`            | Performs analysis using large language models (LLMs) on project data.                                        |
+| `DJ_hello_world_langchain`   | Sets up a basic LangChain app as a "Hello World" example for LLMs.                                           |
+| `DJ_spanish_eng_translation` | Performs Spanish to English translation with Deepseek-R1 (`NOTE`: Takes about ~30 secs to execute this task) |
+| `DJ_sync_dataset_trees`      | Downloads and synchronizes the `trees.csv` dataset into the project structure.                               |
+| `DJ_chromadb_gen_embedding`  | Query engine for LLM applications                                                                            |
+| `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
 
 
 ### 🔌 About pre-commit-hooks and activating
