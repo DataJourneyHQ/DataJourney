@@ -2,39 +2,74 @@ import chromadb
 import pandas as pd
 import numpy as np
 
-# what is happening here?
+"""
+# What's happening here?
 # 1: read the dataset
 # 2: convert to string (that's the format the db expects)
 # 3: preferably set the index and then add to the db collection / or start simple
-YT_comments = pd.read_csv("../intake/data/YoutubeCommentsDataSet.csv", dtype=str, nrows=100)
-YT_comments.dropna(inplace=True)
-YT_comments.reset_index(inplace=True)
-print(YT_comments.dtypes)
+"""
 
 
-documents = YT_comments['Comment'].tolist()
-print(len(documents))
-metadata = []
-ids = []
+def yt_data_read_process(file_path, num_rows, col_to_process):
+    """
+    :param file_path: string, path to the dataset
+    :param num_rows: int, number of rows to read
+    :param col_to_process: string, single column name
+    :return: list, pre-processed data
+    """
+    yt_comments = pd.read_csv(file_path, dtype=str, nrows=num_rows)
+    yt_comments.dropna(inplace=True)
+    yt_comments.reset_index(inplace=True)
 
-for idx in range(len(YT_comments)):
-    metadata.append({"Comment": YT_comments['Comment'][idx]})
-    ids.append(str(YT_comments['index'][idx]))
+    metadata = []
+    ids = []
 
-# the good stuff
-chroma_client = chromadb.Client()
-collection = chroma_client.get_or_create_collection(name="YT_comments_new")
-collection.add(documents=documents, ids=ids)
+    for idx in range(len(yt_comments)):
+        metadata.append({"Comment": yt_comments['Comment'][idx]})
+        ids.append(str(yt_comments['index'][idx]))
 
-# check the created collection
-collection.peek()
-collection.count()
+    return yt_comments[col_to_process].tolist(), ids
 
-# let's query this
-results = collection.query(
-    query_texts=["2009 macbook pro"],
-    n_results=1,
-)
-# voila mix multiple query types to arrive at the desired outcome
-print("the outcome")
-print(results)
+
+def chromadb_processing(documents, ids, db_collection_name, what_to_query, result_num=1):
+    """
+    :param documents: list,  pre-processed data
+    :param ids: customised ids to generate embeddings
+    :param db_collection_name: str, nice name for the collection
+    :param what_to_query: str, drop your fav query text
+    :param result_num: int, default set to 01
+    :return: str, query outcome based on closest vector
+    """
+
+    # the good stuff
+    chroma_client = chromadb.Client()
+    collection = chroma_client.get_or_create_collection(name=db_collection_name)
+    collection.add(documents=documents, ids=ids)
+
+    # check the created collection
+    collection.peek()
+    collection.count()
+
+    # let's query this
+    outcome = collection.query(
+        query_texts=[what_to_query],
+        n_results=result_num,
+    )
+    return outcome
+
+
+if __name__ == '__main__':
+    documents, ids = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
+                                          100,
+                                          "Comment"
+                                          )
+    results = chromadb_processing(documents,
+                                  ids,
+                                  "YT_comments_new",
+                                  "My macbook broke in an accident",
+                                  )
+
+    # voila mix multiple query types to arrive at the desired outcome
+    print(f"The outcome for the query text \n {results}")
+    # just the 'documents' part is interesting to us, let's scoop it out
+    print(results["documents"])

@@ -30,7 +30,7 @@ aiohttp = "*"
 python-fasthtml = "*"
 alembic = ">=1.13.3,<2"
 datasets = ">=3.2.0,<4"
-langchain-community = ">=0.3.14,<0.4"
+langchain-community = ">=0.3.24,<0.4"
 langchain-anthropic = ">=0.3.1,<0.4"
 langgraph = ">=0.2.60,<0.3"
 pillow = ">=11.1.0,<12"
@@ -67,7 +67,8 @@ DJ_llm_analysis_gpt_4o = {cmd = "python analyse_my_data__gpt_4o_mini.py", cwd = 
 DJ_advance_llm_analysis = {cmd = "pythonadvance_analysis_coral_bleeching__meta_Llama_3.py", cwd = "analytics_framework/ai_modeling"}
 DJ_hello_world_langchain = {cmd = "python hello_world_lc.py", cwd = "analytics_framework/langchain"}
 DJ_spanish_eng_translation = { cmd = "python demo_spanish_translation__deepseek_r1.py", cwd = "analytics_framework/ai_modeling"}
-# miscellaneous
+# miscellaneous dataset
 DJ_sync_dataset_trees = {cmd = "curl -v -o trees.csv 'https://people.sc.fsu.edu/~jburkardt/data/csv/trees.csv'", outputs = ["trees.csv"], cwd = "analytics_framework/intake/data"}
-# db
+# RAG
 DJ_chromadb_gen_embedding = { cmd = "python setup_chroma_vector_db.py", cwd = "analytics_framework/rag_system"}
+DJ_RAG_without_memory = { cmd = "python rag_without_context_memory.py", cwd = "analytics_framework/rag_system"}
