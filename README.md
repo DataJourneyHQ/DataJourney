@@ -58,12 +58,12 @@ Each layer has a certain strength of communication inbuilt
 | ✅     | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                |
 | ✅     | `Environment` management via [pixi](https://prefix.dev/)                                                                              |
 | ✅     | `Reading data` from online sources using [intake](https://github.com/intake/intake)                                                   |
-| ✅     | Sample `pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                        |
-| ✅     | Building `Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) |
+| ✅     | `Data pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                        |
+| ✅     | `custom Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) |
 | ✅     | `Exploratory data analysis` (EDA) using [mito](https://www.trymito.io/)                                                               |
 | ✅     | `Web UI` build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                |
 | ✅     | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                |
-| ✅     | Leverage `AI models` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
+| ✅     | `GenAI examples` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
 | ✅     | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                            |
 | ✅     | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models` |
 
