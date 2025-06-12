@@ -18,5 +18,6 @@ def index():
         sources.append({'name': source_name, 'url': source_url})
     return render_template('index.html', sources=sources)
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
