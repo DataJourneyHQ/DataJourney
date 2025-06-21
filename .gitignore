@@ -138,3 +138,6 @@ dmypy.json
 # pixi environments
 .pixi
 *.egg-info
+
+# html content
+./analytics_framework/dashboard/*.html
