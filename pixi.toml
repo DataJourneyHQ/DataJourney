@@ -39,6 +39,7 @@ langchain-openai = ">=0.3.3,<0.4"
 rich-click = ">=1.8.6,<2"
 tomlkit = ">=0.13.2,<0.14"
 chromadb = "*"
+scanapi = ">=2.6.0,<3"
 
 [pypi-dependencies]
 mitoinstaller = "*"
