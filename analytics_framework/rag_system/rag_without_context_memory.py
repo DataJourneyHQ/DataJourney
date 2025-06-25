@@ -1,8 +1,11 @@
 import os
 import pandas as pd
 import numpy as np
+from tabulate import tabulate
 from analytics_framework.langchain.hello_world_lc import get_answer
 from setup_chroma_vector_db import yt_data_read_process, chromadb_processing
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 if __name__ == '__main__':
     # examples to get started
@@ -14,7 +17,7 @@ if __name__ == '__main__':
     llm_user = input(f"Input the prompt to feed the llm running in background, eg: {example_prompt}")
 
     documents, ids = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
-                                          100,
+                                          1000,
                                           "Comment"
                                           )
     results = chromadb_processing(documents,
@@ -25,5 +28,10 @@ if __name__ == '__main__':
     feed_the_llm = f'{llm_user}{results["documents"]}'
     answer = get_answer(feed_the_llm)
     # show and tell
-    print(f"Search outcome based on input query {query_user}\n")
-    print("AI Speaks:\n", answer)
+    data = [
+        ["Document Search Result", str(feed_the_llm)],
+        ["User Query", str(query_user)],
+        ["AI Answer", answer]
+    ]
+
+    print(tabulate(data, headers=["Field", "Value"], tablefmt="fancy_grid"))
