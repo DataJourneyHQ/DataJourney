@@ -31,7 +31,7 @@ def yt_data_read_process(file_path, num_rows, col_to_process):
     return yt_comments[col_to_process].tolist(), ids
 
 
-def chromadb_processing(documents, ids, db_collection_name, what_to_query, result_num=1):
+def chromadb_processing(documents, ids, db_collection_name, what_to_query, result_num=3):
     """
     :param documents: list,  pre-processed data
     :param ids: customised ids to generate embeddings
@@ -60,7 +60,7 @@ def chromadb_processing(documents, ids, db_collection_name, what_to_query, resul
 
 if __name__ == '__main__':
     documents, ids = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
-                                          100,
+                                          1000,
                                           "Comment"
                                           )
     results = chromadb_processing(documents,
