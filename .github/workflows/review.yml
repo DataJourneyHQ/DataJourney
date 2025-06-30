@@ -1,4 +1,6 @@
 name: Lint prose
+permissions:
+  contents: read
 on:
   pull_request:
 
