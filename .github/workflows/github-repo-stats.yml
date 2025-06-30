@@ -1,7 +1,8 @@
 # configures to run for two repos (matrix format)
 name: github-repo-stats
 concurrency: github-repo-stats
-
+permissions:
+  contents: read
 on:
   schedule:
     - cron: "50 23 * * *"
