@@ -1,23 +1,51 @@
 # Security Policy
 
-## Reporting a Vulnerability
+Security is a cornerstone of DataJourney's development philosophy.
+We are committed to maintaining the highest standards of security for our platform and
+deeply value the security community's role in helping us achieve this goal.
 
-Thank you for helping to keep DataJourney safe for everyone. DataJourney is a unique design first
-ecosystem bringing multiple great open source tools & framework together under one umbrella.
+## Vulnerability Disclosure
 
-## Reach out
+We encourage responsible disclosure of security vulnerabilities.
+If you identify a potential security issue in DataJourney, here's how to report it:
 
-- TODO: add email
+### Reporting Process
 
-We will respond to your report within **07 business days** and aim to resolve verified issues promptly.
+1. **Submit a Vulnerability report**: [Click here](https://github.com/DataJourneyHQ/DataJourney/security/advisories)
+2. **Comprehensive Details**: Include reproduction steps, potential impact assessment, affected versions, and any proof-of-concept code or screenshots.
 
-## Supported Versions
+## Our Response Framework
 
-We currently support the latest version of the project. Older versions may not receive security updates.
+When you submit a security report, DataJourney's security team commits to:
 
-## Responsible Disclosure
+**Initial Response**
+- Confirmation of report receipt
+- Initial impact assessment
 
-We encourage responsible disclosure of security issues. Please:
+**Investigation Phase**
+- Thorough analysis of the reported issue
+- Severity classification using industry standards
 
-- Provide clear, reproducible steps.
-- TODO: add more pointers
+**Resolution & Disclosure**
+- Development and testing of security patches
+- Coordinated release of fixes across affected versions
+
+## Coverage Scope
+
+**This policy encompasses:**
+- DataJourney core application code
+- Configuration and deployment scripts
+- Documentation that could impact security
+
+**Out of Scope:**
+- Third-party dependencies (reported separately to respective maintainers)
+- Social engineering attacks
+- Physical security issues
+
+## Get In Touch
+
+For security-related inquiries, vulnerability reports, or general security questions:
+
+**Contact info**: [security@datajourneyhq.com](mailto:security@datajourneyhq.com)
+
+We appreciate your efforts in keeping DataJourney secure for everyone!
