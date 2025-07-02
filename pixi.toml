@@ -40,6 +40,7 @@ rich-click = ">=1.8.6,<2"
 tomlkit = ">=0.13.2,<0.14"
 chromadb = ">=1.0.12,<2"
 scanapi = ">=2.6.0,<3"
+cyclonedx-bom = ">=6.1.2,<7"
 
 [pypi-dependencies]
 mitoinstaller = "*"
