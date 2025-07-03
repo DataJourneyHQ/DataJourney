@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="analytics_framework",
-    version="1.0.0",
+    version="1.3.0",
     author="sayantikabanik",
     description="Design first open source data management toolkit",
     long_description=open("README.md").read(),
