@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/DataJourneyHQ/DataJourney,110,20
+/DataJourneyHQ/DataJourney/issues,14,5
+/DataJourneyHQ/DataJourney/commits/main,14,3
+/DataJourneyHQ/DataJourney/pulls,10,2
+/DataJourneyHQ/DataJourney/actions,7,1
+/DataJourneyHQ/DataJourney/stargazers,5,1
+/DataJourneyHQ/DataJourney/issues/179,4,3
+/DataJourneyHQ/DataJourney/tree/main,4,3
+/DataJourneyHQ/DataJourney/tree/main/analytics_framework,4,3
+/DataJourneyHQ/DataJourney/actions/workflows/sbom-generator-cyclonedx.yml,4,1
