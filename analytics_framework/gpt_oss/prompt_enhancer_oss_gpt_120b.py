@@ -43,3 +43,4 @@ if __name__ == "__main__":
     save_as_enhanced_prompt = completion.choices[0].message.content
     with open("Enhanced_Prompt.md", "w", encoding='utf-8') as file:
         file.write(save_as_enhanced_prompt)
+    print("Enhanced prompt saved to 'Enhanced_Prompt.md'")
