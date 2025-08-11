@@ -66,6 +66,7 @@ Each layer has a certain strength of communication inbuilt
 | ✅     | `GenAI examples` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
 | ✅     | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                            |
 | ✅     | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models` |
+| ✅     | `Prompt enhancer` powered by `gpt-oss-120b`|
 
 
 ### ☕️ Quickly getting started with DataJourney
@@ -99,6 +100,7 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_sync_dataset_trees`      | Downloads and synchronizes the `trees.csv` dataset into the project structure.                               |
 | `DJ_chromadb_gen_embedding`  | Query engine for LLM applications                                                                            |
 | `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
+| `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
 
 
 ### 🔌 About pre-commit-hooks and activating

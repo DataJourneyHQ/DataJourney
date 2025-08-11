@@ -41,6 +41,7 @@ tomlkit = ">=0.13.2,<0.14"
 chromadb = ">=1.0.12,<2"
 scanapi = ">=2.6.0,<3"
 cyclonedx-bom = ">=6.1.2,<7"
+python-dotenv = ">=1.1.1,<2"
 
 [pypi-dependencies]
 mitoinstaller = "*"
@@ -74,3 +75,5 @@ DJ_sync_dataset_trees = {cmd = "curl -v -o trees.csv 'https://people.sc.fsu.edu/
 # RAG
 DJ_chromadb_gen_embedding = { cmd = "python setup_chroma_vector_db.py", cwd = "analytics_framework/rag_system"}
 DJ_RAG_without_memory = { cmd = "python rag_without_context_memory.py", cwd = "analytics_framework/rag_system"}
+# gpt_oss
+DJ_prompt_enhancer = { cmd = "python prompt_enhancer_oss_gpt_120b.py", cwd = "analytics_framework/gpt_oss"}
