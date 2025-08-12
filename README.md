@@ -14,7 +14,7 @@
 </h1>
 
 <p align="center">
-  <b>Recipient: GitHub Secure Open Source Fund</b><br/>
+  <b>Recipient: GitHub Secure Open Source Fund<b><br/>
     &nbsp;&nbsp;
     <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/">💖 Official announcement</a>
 
