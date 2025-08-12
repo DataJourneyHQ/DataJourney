@@ -8,23 +8,19 @@
 [![Deploy DataJourney Stats](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml)
 [![Lint prose](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml)
 [![Monitor GitHub API Rate Limit](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml)
-[![Funded by GitHub SOS Fund](https://img.shields.io/badge/Funded%20by-GitHub%20Secure%20Open%20Source%20Fund-181717?logo=github&logoColor=white)](https://resources.github.com/github-secure-open-source-fund/)\
-[![Sponsor DataJourneyHQ](https://img.shields.io/badge/Sponsor-DataJourneyHQ-ff69b4?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/DataJourneyHQ)
-
+[![Funded by GitHub SOS Fund](https://img.shields.io/badge/Funded%20by-GitHub%20Secure%20Open%20Source%20Fund-181717?logo=github&logoColor=white)](https://resources.github.com/github-secure-open-source-fund/)
 </h1>
 
 <p align="center">
-  <b>Recipient: GitHub Secure Open Source Fund<b><br/>
-    &nbsp;&nbsp;
-    <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/">💖 Official announcement</a>
-
   <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DJ rocks" style="width:500px; height:600px;">
 </p>
 
+<!-- Funding spotlight -->
 <p align="center">
   <b>Recipient: GitHub Secure Open Source Fund</b><br/>
-  &nbsp;&nbsp;
-  <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/">💖 Official announcement</a>
+  <a href="https://github.com/sponsors/DataJourneyHQ"><b>💖 Sponsor DataJourneyHQ</b></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/">Official announcement</a>
 </p>
 
 ### 🚌 DataJourney
