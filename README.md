@@ -7,7 +7,7 @@
 [![github-repo-stats](https://github.com/sayantikabanik/DataJourney/actions/workflows/github-repo-stats.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/github-repo-stats.yml)
 [![Deploy DataJourney Stats](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml)
 [![Lint prose](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml)
-[![Monitor GitHub API Rate Limit](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml)\
+[![Monitor GitHub API Rate Limit](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml)
 
 </h1>
 
