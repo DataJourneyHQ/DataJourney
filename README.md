@@ -11,16 +11,16 @@
 [![Funded by GitHub SOS Fund](https://img.shields.io/badge/Funded%20by-GitHub%20Secure%20Open%20Source%20Fund-181717?logo=github&logoColor=white)](https://resources.github.com/github-secure-open-source-fund/)
 </h1>
 
-<p align="center">
-  <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DJ rocks" style="width:500px; height:600px;">
-</p>
-
 <!-- Funding spotlight -->
 <p align="center">
   <b>Recipient: GitHub Secure Open Source Fund</b><br/>
   <a href="https://github.com/sponsors/DataJourneyHQ"><b>💖 Sponsor DataJourneyHQ</b></a>
   &nbsp;•&nbsp;
   <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/"><b>🥁Official announcement</b></a>
+</p>
+
+<p align="center">
+  <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DJ rocks" style="width:500px; height:600px;">
 </p>
 
 ### 🚌 DataJourney
