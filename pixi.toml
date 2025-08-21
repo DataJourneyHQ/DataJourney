@@ -67,7 +67,7 @@ DJ_fasthtml_app = { cmd = "python app.py", depends-on = "DJ_package", cwd = "ana
 DJ_mito_app = { cmd = "jupyter notebook mito_exp.ipynb", depends-on = "DJ_package", cwd = "usage_guide"}
 # llm
 DJ_llm_analysis_gpt_4o = {cmd = "python analyse_my_data__gpt_4o_mini.py", cwd = "analytics_framework/ai_modeling"}
-DJ_advance_llm_analysis = {cmd = "pythonadvance_analysis_coral_bleeching__meta_Llama_3.py", cwd = "analytics_framework/ai_modeling"}
+DJ_advance_llm_analysis = {cmd = "python advance_analysis_coral_bleeching__meta_Llama_3.py", cwd = "analytics_framework/ai_modeling"}
 DJ_hello_world_langchain = {cmd = "python hello_world_lc.py", cwd = "analytics_framework/langchain"}
 DJ_spanish_eng_translation = { cmd = "python demo_spanish_translation__deepseek_r1.py", cwd = "analytics_framework/ai_modeling"}
 # miscellaneous dataset
