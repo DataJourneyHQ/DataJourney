@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 3 * * *'  # Runs every day at 03:00 UTC
 
+permissions:
+  contents: read
+
 jobs:
   list-models:
     runs-on: ubuntu-latest
