@@ -26,12 +26,14 @@ jobs:
             https://models.github.ai/catalog/models \
             -o github-models.json
 
-      # - name: Extract model names
-      #   run: |
-      #     jq '[.models[].name]' github-models.json > github-model-names.json
+      - name: Extract model names
+        run: |
+          jq '[.[] | {id, name, summary}]' "github-models.json" > github-models-mini.json
 
       - name: Upload models catalog as artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-models-catalog
-          path: github-models.json
+          path: |
+            github-models.json
+            github-models-mini.json
