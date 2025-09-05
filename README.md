@@ -1,6 +1,7 @@
 <h1 align="center">
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)\
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11135/badge)](https://www.bestpractices.dev/projects/11135)\
 [![DataJourney Stats](https://img.shields.io/badge/DataJourney-Visitors-orange)](https://datajourneyhq.github.io/DataJourney/)
 [![Code of Conduct](https://img.shields.io/badge/Code_of_Conduct-Contributor%20Covenant-blue)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)\
 [![CI](https://github.com/sayantikabanik/DataJourney/actions/workflows/CI.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/CI.yml)
