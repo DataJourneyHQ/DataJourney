@@ -14,4 +14,4 @@ jobs:
     steps:
       # using the marketplace action: https://github.com/marketplace/actions/list-github-models
     - name: List GitHub Models
-    - uses: DataJourneyHQ/list-github-models@v1.1.0
+      uses: DataJourneyHQ/list-github-models@v1.1.0
