@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   list-active-llm:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       # using the marketplace action: https://github.com/marketplace/actions/list-github-models
     - name: List GitHub Models
