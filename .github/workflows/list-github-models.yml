@@ -9,6 +9,9 @@ permissions:
   contents: read
 
 jobs:
-  name: List GitHub Models
-    # using the marketplace action: https://github.com/marketplace/actions/list-github-models
-  uses: DataJourneyHQ/list-github-models@v1.1.0
+  list-active-llm:
+    runs-on: ubuntu-22.04
+    steps:
+      # using the marketplace action: https://github.com/marketplace/actions/list-github-models
+    - name: List GitHub Models
+    - uses: DataJourneyHQ/list-github-models@v1.1.0
