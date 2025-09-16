@@ -9,6 +9,6 @@ permissions:
   contents: read
 
 jobs:
-  - name: List GitHub Models
+  name: List GitHub Models
     # using the marketplace action: https://github.com/marketplace/actions/list-github-models
-    uses: DataJourneyHQ/list-github-models@v1.1.0
+  uses: DataJourneyHQ/list-github-models@v1.1.0
