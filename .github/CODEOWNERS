@@ -1,0 +1,21 @@
+# Global code owners
+* @DataJourneyHQ/maintainers
+
+# Security-related files
+/.github/workflows/ @DataJourneyHQ/security-team @DataJourneyHQ/maintainers
+/SECURITY.md @DataJourneyHQ/security-team @DataJourneyHQ/maintainers
+/.github/dependabot.yml @DataJourneyHQ/security-team @DataJourneyHQ/maintainers
+/.github/SECURITY.yml @DataJourneyHQ/security-team @DataJourneyHQ/maintainers
+
+# Configuration files
+/pixi.toml @DataJourneyHQ/maintainers
+/requirements.txt @DataJourneyHQ/maintainers
+/setup.py @DataJourneyHQ/maintainers
+
+# Core application code
+/analytics_framework/ @DataJourneyHQ/data-engineers @DataJourneyHQ/maintainers
+
+# Documentation
+/README.md @DataJourneyHQ/docs-team @DataJourneyHQ/maintainers
+/CODE_OF_CONDUCT.md @DataJourneyHQ/community-team @DataJourneyHQ/maintainers
+/CONTRIBUTING.md @DataJourneyHQ/community-team @DataJourneyHQ/maintainers

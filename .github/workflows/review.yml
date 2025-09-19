@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
     - name: Vale
-      uses: errata-ai/vale-action@reviewdog
+      uses: errata-ai/vale-action@0c6ce076b2df6985b17df8ad7b85b36f1f8d5bdc # reviewdog
       with:
         files: all
         vale_flags: --glob=!*/*-fr/*

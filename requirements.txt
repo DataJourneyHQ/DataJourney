@@ -1,0 +1,58 @@
+# Core dependencies for DataJourney
+# This file is auto-generated from pixi.toml for pip compatibility
+# Use 'pixi run DJ_package' for development setup
+
+# Data processing and analysis
+intake==0.6.5
+pandas>=2.3.0,<3
+numpy>=1.26.4,<2
+scipy>=1.15.2,<2
+scikit-learn>=1.7.0,<2
+statsmodels>=0.14.4,<0.15
+seaborn>=0.13.2,<0.14
+matplotlib>=3.10.3,<4
+
+# Web frameworks and APIs
+werkzeug==2.2.2
+aiohttp>=3.12.13,<4
+requests>=2.32.4,<3
+urllib3>=2.5.0,<3
+
+# Development tools
+pre-commit>=4.2.0,<5
+pytest>=8.4.1,<9
+
+# Data pipeline and orchestration
+dagster==1.8.13
+dagit==1.8.13
+
+# Visualization
+hvplot>=0.11.3,<0.12
+holoviews>=1.20.2,<2
+
+# FastHTML and web development
+python-fasthtml>=0.12.20,<0.13
+alembic>=1.13.3,<2
+
+# AI/ML and language models
+datasets>=3.2.0,<4
+langchain-community>=0.3.24,<0.4
+langchain-anthropic>=0.3.1,<0.4
+langgraph>=0.2.60,<0.3
+transformers>=4.47.1,<5
+langchain-openai>=0.3.3,<0.4
+chromadb>=1.0.12,<2
+
+# Image processing
+pillow>=11.1.0,<12
+
+# CLI and configuration
+rich-click>=1.8.6,<2
+tomlkit>=0.13.2,<0.14
+python-dotenv>=1.1.1,<2
+
+# Security and SBOM
+cyclonedx-bom>=6.1.2,<7
+
+# API testing
+scanapi>=2.6.0,<3
