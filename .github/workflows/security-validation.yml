@@ -1,0 +1,107 @@
+name: Security Policy Validation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/**'
+      - 'requirements.txt'
+      - 'pixi.toml'
+      - 'SECURITY.md'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/**'
+      - 'requirements.txt'
+      - 'pixi.toml'
+      - 'SECURITY.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Validate YAML files
+        run: |
+          python -c "
+          import yaml
+          import os
+          
+          print('🔍 Validating YAML files...')
+          errors = []
+          
+          for root, dirs, files in os.walk('.github'):
+              for file in files:
+                  if file.endswith(('.yml', '.yaml')):
+                      filepath = os.path.join(root, file)
+                      try:
+                          with open(filepath, 'r') as f:
+                              yaml.safe_load(f)
+                          print(f'✅ {filepath}')
+                      except Exception as e:
+                          errors.append(f'{filepath}: {e}')
+                          print(f'❌ {filepath}: {e}')
+          
+          if errors:
+              print(f'Found {len(errors)} YAML validation errors')
+              exit(1)
+          else:
+              print('✅ All YAML files are valid')
+          "
+
+      - name: Check pinned actions
+        run: |
+          echo "🔍 Checking for unpinned GitHub Actions..."
+          # Exclude commented lines and DataJourneyHQ's own actions
+          unpinned=$(grep -r "^[[:space:]]*-[[:space:]]*name:\|^[[:space:]]*uses:" .github/workflows/ | grep "uses:" | grep -v "#" | grep -v "DataJourneyHQ/" | grep -E "@v[0-9]|@main|@master" || true)
+          if [[ -n "$unpinned" ]]; then
+            echo "❌ Found unpinned actions:"
+            echo "$unpinned"
+            echo "All third-party actions should be pinned to commit SHAs."
+            exit 1
+          else
+            echo "✅ All third-party actions are properly pinned to commit SHAs"
+          fi
+
+      - name: Validate security files exist
+        run: |
+          echo "🔍 Checking required security files..."
+          required_files=(
+            ".github/dependabot.yml"
+            ".github/SECURITY.yml"
+            ".github/CODEOWNERS"
+            "SECURITY.md"
+            "requirements.txt"
+          )
+          
+          missing_files=()
+          for file in "${required_files[@]}"; do
+            if [[ -f "$file" ]]; then
+              echo "✅ Found: $file"
+            else
+              echo "❌ Missing: $file"
+              missing_files+=("$file")
+            fi
+          done
+          
+          if [[ ${#missing_files[@]} -gt 0 ]]; then
+            echo "❌ Missing required security files: ${missing_files[*]}"
+            exit 1
+          else
+            echo "✅ All required security files are present"
+          fi
+
+      - name: Check workflow permissions
+        run: |
+          echo "🔍 Checking workflow permissions..."
+          if grep -r "permissions:" .github/workflows/ | grep -v "permissions: read-all" | grep -v "contents: read" | grep -v "security-events: write" | grep -v "id-token: write" | grep -v "pages: write"; then
+            echo "⚠️  Found workflows with broad permissions. Please review."
+          else
+            echo "✅ Workflow permissions look appropriate"
+          fi
