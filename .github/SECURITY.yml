@@ -1,0 +1,39 @@
+# Security Policy Configuration
+# This file enhances the repository's security posture for OpenSSF Scorecard
+
+# Vulnerability reporting
+vulnerability_reporting: true
+
+# Security contact
+security_contact: security@datajourneyhq.com
+
+# Supported versions
+supported_versions:
+ - version: "2.x"
+   supported: true
+ - version: "1.x"
+   supported: false
+
+# Security best practices
+security_practices:
+ - name: "Dependency Updates"
+   description: "Automated dependency updates via Dependabot"
+   enabled: true
+
+ - name: "Code Scanning"
+   description: "CodeQL analysis for vulnerability detection"
+   enabled: true
+
+ - name: "Secret Scanning"
+   description: "GitHub secret scanning enabled"
+   enabled: true
+
+ - name: "SBOM Generation"
+   description: "Software Bill of Materials generated automatically"
+   enabled: true
+
+# License compliance
+license: "Apache-2.0"
+
+# Privacy policy
+privacy_policy_url: "https://github.com/DataJourneyHQ/DataJourney/blob/main/SECURITY.md"
