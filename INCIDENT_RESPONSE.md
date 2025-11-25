@@ -50,4 +50,4 @@
 - [ ] Communicate transparently
 
 ---
-*Updated: Nov 2025 | Review: Feb 2026*
+*Updated: Nov 2025 | Review: Jan 2026*
