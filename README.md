@@ -110,18 +110,16 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
 | `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
 
-### 📚 Important Project Files (The Boring But Important Stuff)
+### Important Housekeeping Documentation
 
-Hey there! 👋 We know documentation can be dry, but these files are actually pretty important. Here's what they do and when you might need them:
+| Document | Purpose | When to Use | Audience |
+|----------|---------|-------------|----------|
+| [SECURITY.md](SECURITY.md) | Security vulnerability reporting and policies | Found a security issue or want to understand our security practices | Developers, security researchers, users |
+| [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md) | Emergency response procedures and contact information | System outages, security incidents, or operational issues | Maintainers, contributors, incident responders |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines and behavioral expectations | Always - sets community standards and reporting procedures | Everyone in the community |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines and getting started information | Ready to contribute code, documentation, or report issues | New and existing contributors |
 
-| File | What It's For | When You Need It | Who Should Care |
-|------|---------------|------------------|-----------------|
-| **🛡️ [SECURITY.md](SECURITY.md)** | "Help, I Found a Bug!" | Found something that looks like a security issue? This is your guide. | **Developers**: Step-by-step on reporting vulnerabilities responsibly<br/>**Users**: What we do to keep your data safe<br/>**Real talk**: If something seems fishy, don't ignore it - report it! |
-| **🚨 [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md)** | "Oh No, Something's Broken!" | When things go sideways (hopefully never, but we're prepared). | **Maintainers**: Quick action plan when incidents happen<br/>**Contributors**: Know who to contact if you spot issues<br/>**Plain English**: Our emergency playbook - think fire drill, but for code |
-| **🤝 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** | "Let's Play Nice" | Always! This sets the tone for our community. | **Everyone**: Basic human decency guidelines<br/>**New contributors**: What we expect and what you can expect from us<br/>**Bottom line**: Be kind, be respectful, help each other learn |
-| **📝 [CONTRIBUTING.md](CONTRIBUTING.md)** | "I Want to Help!" | Ready to jump in? Start here. | **Quick link**: Points you to our [detailed wiki](https://github.com/DataJourneyHQ/DataJourney/wiki/Contribute-to-DataJourney)<br/>**First-timer friendly**: We don't bite, promise!<br/>**Get involved**: Every contribution matters, big or small |
-
-**💡 Pro tip**: Bookmark these if you're planning to stick around. They're like the project's instruction manual - boring to read upfront, but super helpful when you need them!
+**Note**: These documents contain essential project governance information. Bookmark them for quick reference during development and community participation.
 
 ### 🔌 About pre-commit-hooks and activating
 Just like the name suggests, pre-commit-hooks are designed to format the code based on PEP standards before committing. [More details](https://pre-commit.com/)
