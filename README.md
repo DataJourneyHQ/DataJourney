@@ -110,33 +110,18 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
 | `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
 
-### 📚 Important Housekeeping notes
+### 📚 Important Project Files (The Boring But Important Stuff)
 
-#### 🛡️ [SECURITY.md](SECURITY.md) - "Help, I Found a Bug!"
-**When to use**: Found something that looks like a security issue? This is your guide.
-- **For developers**: Step-by-step on reporting vulnerabilities responsibly
-- **For users**: What we do to keep your data safe
-- **Real talk**: If something seems fishy, don't ignore it - report it!
+Hey there! 👋 We know documentation can be dry, but these files are actually pretty important. Here's what they do and when you might need them:
 
-#### 🚨 [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md) - "Oh No, Something's Broken!"
-**When to use**: When things go sideways (hopefully never, but we're prepared).
-- **For maintainers**: Quick action plan when incidents happen
-- **For contributors**: Know who to contact if you spot issues
-- **Plain English**: Our emergency playbook - think fire drill, but for code
+| File | What It's For | When You Need It | Who Should Care |
+|------|---------------|------------------|-----------------|
+| **🛡️ [SECURITY.md](SECURITY.md)** | "Help, I Found a Bug!" | Found something that looks like a security issue? This is your guide. | **Developers**: Step-by-step on reporting vulnerabilities responsibly<br/>**Users**: What we do to keep your data safe<br/>**Real talk**: If something seems fishy, don't ignore it - report it! |
+| **🚨 [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md)** | "Oh No, Something's Broken!" | When things go sideways (hopefully never, but we're prepared). | **Maintainers**: Quick action plan when incidents happen<br/>**Contributors**: Know who to contact if you spot issues<br/>**Plain English**: Our emergency playbook - think fire drill, but for code |
+| **🤝 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** | "Let's Play Nice" | Always! This sets the tone for our community. | **Everyone**: Basic human decency guidelines<br/>**New contributors**: What we expect and what you can expect from us<br/>**Bottom line**: Be kind, be respectful, help each other learn |
+| **📝 [CONTRIBUTING.md](CONTRIBUTING.md)** | "I Want to Help!" | Ready to jump in? Start here. | **Quick link**: Points you to our [detailed wiki](https://github.com/DataJourneyHQ/DataJourney/wiki/Contribute-to-DataJourney)<br/>**First-timer friendly**: We don't bite, promise!<br/>**Get involved**: Every contribution matters, big or small |
 
-#### 🤝 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - "Let's Empower each other"
-**When to use**: Always! This sets the tone for our community.
-- **For everyone**: Basic human decency guidelines
-- **For new contributors**: What we expect and what you can expect from us
-- **Bottom line**: Be kind, be respectful, help each other learn
-
-#### 📝 [CONTRIBUTING.md](CONTRIBUTING.md) - "I Want to Help!"
-**When to use**: Ready to jump in? Start here.
-- **Quick link**: Points you to our [detailed wiki](https://github.com/DataJourneyHQ/DataJourney/wiki/Contribute-to-DataJourney)
-- **First-timer friendly**: We don't bite, promise!
-- **Get involved**: Every contribution matters, big or small
-
-**💡 Pro tip**: Bookmark these if you're planning to stick around. They're like the project's instruction manual.
+**💡 Pro tip**: Bookmark these if you're planning to stick around. They're like the project's instruction manual - boring to read upfront, but super helpful when you need them!
 
 ### 🔌 About pre-commit-hooks and activating
 Just like the name suggests, pre-commit-hooks are designed to format the code based on PEP standards before committing. [More details](https://pre-commit.com/)
