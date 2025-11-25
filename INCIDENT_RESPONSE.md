@@ -8,7 +8,7 @@
 - **P3 Low**: Minor bugs, documentation issues → **72 hours**
 
 ## 📞 Contacts
-- **Security**: security@datajourneyhq.com
+- **Security**: contact@datajourneyhq.com
 
 ## 🔍 Reporting
 - **GitHub**: [Security Advisories](https://github.com/DataJourneyHQ/DataJourney/security/advisories)
