@@ -36,10 +36,17 @@ DataJourney demonstrates how organizations can effectively manage and utilize da
 
 Built on open-source principles, the framework guides users through essential steps: from **identifying** goals and **selecting tools** to **testing** and **customising** workflows. With its flexible, modular design, DataJourney can be tailored to individual needs, making it an invaluable toolkit for data professionals.
 
-### 🚦 Hold on, looking to contribute?
+### 🚦 Important Housekeeping Documentation
 
-Head over to the [wiki](https://github.com/DataJourneyHQ/DataJourney/wiki/Contribute-to-DataJourney), let's make it happen together. We don't bite :)
+| Document | Purpose | When to Use | Audience |
+|----------|---------|-------------|----------|
+| [SECURITY.md](SECURITY.md) | Security vulnerability reporting and policies | Found a security issue or want to understand our security practices | Developers, security researchers, users |
+| [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md) | Emergency response procedures and contact information | System outages, security incidents, or operational issues | Maintainers, contributors, incident responders |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines and behavioral expectations | Always - sets community standards and reporting procedures | Everyone in the community |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines and getting started information | Ready to contribute code, documentation, or report issues | New and existing contributors |
 
+> [!NOTE]
+> These documents contain essential project governance information. Bookmark them for quick reference during development and community participation.
 
 ### 🧱 Design Philosophy (LEGO)
 Built with additive, subtractive capabilities glued with open source.
@@ -110,16 +117,6 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
 | `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
 
-### Important Housekeeping Documentation
-
-| Document | Purpose | When to Use | Audience |
-|----------|---------|-------------|----------|
-| [SECURITY.md](SECURITY.md) | Security vulnerability reporting and policies | Found a security issue or want to understand our security practices | Developers, security researchers, users |
-| [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md) | Emergency response procedures and contact information | System outages, security incidents, or operational issues | Maintainers, contributors, incident responders |
-| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines and behavioral expectations | Always - sets community standards and reporting procedures | Everyone in the community |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines and getting started information | Ready to contribute code, documentation, or report issues | New and existing contributors |
-
-**Note**: These documents contain essential project governance information. Bookmark them for quick reference during development and community participation.
 
 ### 🔌 About pre-commit-hooks and activating
 Just like the name suggests, pre-commit-hooks are designed to format the code based on PEP standards before committing. [More details](https://pre-commit.com/)
