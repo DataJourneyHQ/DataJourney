@@ -59,11 +59,10 @@ def analyze_data(intake_catalog_entry):
     return
 
 if __name__ == "__main__":
-# Example usage (other datasets available via intake catalog)
-intake_catalog_entry = "twilio_stock_price"
-try:
-    response = analyze_data(intake_catalog_entry)
-    print("Analysis completed successfully.")
-    print(response.choices[0].message.content)
-except Exception as e:
-    print(f"Error during analysis: {e}")
+    intake_catalog_entry = "twilio_stock_price" # Example catalog entry name
+    try:
+        response = analyze_data(intake_catalog_entry)
+        print("Analysis completed successfully.")
+        print(response.choices[0].message.content)
+    except Exception as e:
+        print(f"Error during analysis: {e}")
