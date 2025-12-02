@@ -51,6 +51,7 @@ openai = "*"
 azure-ai-inference = "*"
 mistralai = "*"
 langchain-deepseek = "*"
+deepeval = "*"
 
 [tasks]
 # operations_DJ
