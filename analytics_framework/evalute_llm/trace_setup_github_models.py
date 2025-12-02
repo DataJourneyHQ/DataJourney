@@ -17,7 +17,7 @@ client = OpenAI(
 @observe()
 def llm_app(query: str) -> str:
     return client.chat.completions.create(
-        model="gpt-4o",
+        model=model_name,
         messages=[
             {"role": "user", "content": query}
         ]
