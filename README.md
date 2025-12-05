@@ -24,29 +24,18 @@
   <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DJ rocks" style="width:500px; height:600px;">
 </p>
 
-### 🚌 DataJourney
 
-#### 🪶Short version
+### 🪶Short version
 
-Design- first Open Source Data Management Toolkit. Simplifies data workflows with modular, reproducible solutions
+A design-first open-source data management toolkit.\
+Understand the mechanics of **stitching** tools together into one cohesive, beautiful **system**.
 
-#### 🌲Long version
+### 🌲Long version
 
-DataJourney demonstrates how organizations can effectively manage and utilize data by harnessing the power of open-source technologies. It's designed to help navigate the complex landscape of data tools, offering a structured approach to building **scalable**, and **reproducible** data workflows.
+DataJourney is a design-first open-source data management toolkit that teaches you how to assemble cohesive data systems from individual components. 
 
-Built on open-source principles, the framework guides users through essential steps: from **identifying** goals and **selecting tools** to **testing** and **customising** workflows. With its flexible, modular design, DataJourney can be tailored to individual needs, making it an invaluable toolkit for data professionals.
-
-### 🚦 Important Housekeeping Documentation
-
-| Document | Purpose | When to Use | Audience |
-|----------|---------|-------------|----------|
-| [SECURITY.md](SECURITY.md) | Security vulnerability reporting and policies | Found a security issue or want to understand our security practices | Developers, security researchers, users |
-| [INCIDENT_RESPONSE.md](INCIDENT_RESPONSE.md) | Emergency response procedures and contact information | System outages, security incidents, or operational issues | Maintainers, contributors, incident responders |
-| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines and behavioral expectations | Always - sets community standards and reporting procedures | Everyone in the community |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines and getting started information | Ready to contribute code, documentation, or report issues | New and existing contributors |
-
-> [!NOTE]
-> These documents contain essential project governance information. Bookmark them for quick reference during development and community participation.
+Rather than prescribing specific tools, it demonstrates the mechanics of integration, demonstrating how to stitch together open-source technologies into scalable, reproducible workflows.
+With its modular, flexible design, DataJourney serves as both a learning resource and a practical toolkit for data professionals who want to grasp the art and science of building harmonious data systems.
 
 ### 🧱 Design Philosophy (LEGO)
 Built with additive, subtractive capabilities glued with open source.
