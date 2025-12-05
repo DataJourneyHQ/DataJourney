@@ -1,6 +1,7 @@
 import chromadb
 import pandas as pd
 import numpy as np
+import click
 
 """
 # What's happening here?
@@ -58,18 +59,49 @@ def chromadb_processing(documents, ids, db_collection_name, what_to_query, resul
     return outcome
 
 
-if __name__ == '__main__':
-    documents, ids = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
-                                          1000,
-                                          "Comment"
-                                          )
-    results = chromadb_processing(documents,
-                                  ids,
-                                  "YT_comments_new",
-                                  "My macbook broke in an accident",
-                                  )
+@click.command()
+@click.option(
+    "--query",
+    "-q",
+    default="My macbook broke in an accident",
+    show_default=True,
+    help="Query text to search for in the ChromaDB collection.",
+)
+@click.option(
+    "--n-results",
+    "-n",
+    "n_results",
+    default=3,
+    show_default=True,
+    type=int,
+    help="Number of nearest neighbours to return from ChromaDB.",
+)
+def main(query: str, n_results: int) -> None:
+    """
+    Populate a ChromaDB collection from YouTube comments and run a query.
 
-    # voila mix multiple query types to arrive at the desired outcome
-    print(f"The outcome for the query text \n {results}")
-    # just the 'documents' part is interesting to us, let's scoop it out
-    print(results["documents"])
+    If no query is provided via CLI, a default example query is used.
+    """
+    # 1. Read and process data
+    documents, ids = yt_data_read_process(
+        "../intake/data/YoutubeCommentsDataSet.csv",
+        1000,
+        "Comment",
+    )
+
+    # 2. Build / load collection and run query
+    results = chromadb_processing(
+        documents,
+        ids,
+        "YT_comments_new",
+        query,
+        result_num=n_results,
+    )
+
+    # 3. Display results
+    click.echo(f"The outcome for the query text:\n{query}\n")
+    click.echo(results.get("documents"))
+
+
+if __name__ == "__main__":
+    main()
