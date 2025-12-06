@@ -9,7 +9,7 @@ import click
 # 2: convert to string (that's the format the db expects)
 # 3: preferably set the index and then add to the db collection / or start simple
 """
-
+DEFAULT_QUERY = "My macbook broke in an accident"
 
 def yt_data_read_process(file_path, num_rows, col_to_process):
     """
@@ -61,27 +61,37 @@ def chromadb_processing(documents, ids, db_collection_name, what_to_query, resul
 
 @click.command()
 @click.option(
-    "--query",
     "-q",
-    default="My macbook broke in an accident",
+    "query",
+    default=DEFAULT_QUERY,
     show_default=True,
     help="Query text to search for in the ChromaDB collection.",
 )
+
 @click.option(
-    "--n-results",
     "-n",
     "n_results",
     default=3,
     show_default=True,
     type=int,
-    help="Number of nearest neighbours to return from ChromaDB.",
+    help="Number of nearest neighbours to return.",
 )
+
+
 def main(query: str, n_results: int) -> None:
     """
     Populate a ChromaDB collection from YouTube comments and run a query.
 
-    If no query is provided via CLI, a default example query is used.
+    Args:
+        query (str): Query text to search for in the ChromaDB collection.
+        n_results (int): Number of nearest neighbours to return.
+
+    Returns:
+        None
     """
+
+    if query == DEFAULT_QUERY:
+        click.echo(f'Defaulting to "{DEFAULT_QUERY}" since no query was provided.\n')
     # 1. Read and process data
     documents, ids = yt_data_read_process(
         "../intake/data/YoutubeCommentsDataSet.csv",
@@ -99,7 +109,7 @@ def main(query: str, n_results: int) -> None:
     )
 
     # 3. Display results
-    click.echo(f"The outcome for the query text:\n{query}\n")
+    click.echo("Query results:")
     click.echo(results.get("documents"))
 
 
