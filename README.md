@@ -76,8 +76,8 @@ Each layer has a certain strength of communication inbuilt
 ### ☕️ Quickly getting started with DataJourney
 
 - Fork the repository
-- Generate & add `GITHUB_TOKEN`, instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
-  - Added requirement to run the LLM based workflows
+- Generate & add `GITHUB_TOKEN`, instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)\
+    `[Additional requirement to run **LLM based** workflows; Eg; DJ_prompt_enhancer, DJ_llm_analysis, others]`
 - Switch directory `cd DataJourney`
 - Download pixi : [prefix.dev](https://prefix.dev/)
 - Activate env: `pixi shell`
