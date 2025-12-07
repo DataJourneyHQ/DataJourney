@@ -1,6 +1,8 @@
 """
 Package manager for analytics_framework
 """
+# -*- coding: utf-8 -*-
+# patch fix (needs a proper fix)
 
 from setuptools import find_packages, setup
 
