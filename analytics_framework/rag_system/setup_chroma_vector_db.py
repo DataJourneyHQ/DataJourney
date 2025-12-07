@@ -1,6 +1,7 @@
 import chromadb
 import pandas as pd
 import numpy as np
+import click
 
 """
 # What's happening here?
@@ -8,7 +9,7 @@ import numpy as np
 # 2: convert to string (that's the format the db expects)
 # 3: preferably set the index and then add to the db collection / or start simple
 """
-
+DEFAULT_QUERY = "My macbook broke in an accident"
 
 def yt_data_read_process(file_path, num_rows, col_to_process):
     """
@@ -58,18 +59,59 @@ def chromadb_processing(documents, ids, db_collection_name, what_to_query, resul
     return outcome
 
 
-if __name__ == '__main__':
-    documents, ids = yt_data_read_process("../intake/data/YoutubeCommentsDataSet.csv",
-                                          1000,
-                                          "Comment"
-                                          )
-    results = chromadb_processing(documents,
-                                  ids,
-                                  "YT_comments_new",
-                                  "My macbook broke in an accident",
-                                  )
+@click.command()
+@click.option(
+    "-q",
+    "query",
+    default=DEFAULT_QUERY,
+    show_default=True,
+    help="Query text to search for in the ChromaDB collection.",
+)
 
-    # voila mix multiple query types to arrive at the desired outcome
-    print(f"The outcome for the query text \n {results}")
-    # just the 'documents' part is interesting to us, let's scoop it out
-    print(results["documents"])
+@click.option(
+    "-n",
+    "n_results",
+    default=3,
+    show_default=True,
+    type=int,
+    help="Number of nearest neighbours to return.",
+)
+
+
+def main(query: str, n_results: int) -> None:
+    """
+    Populate a ChromaDB collection from YouTube comments and run a query.
+
+    Args:
+        query (str): Query text to search for in the ChromaDB collection.
+        n_results (int): Number of nearest neighbours to return.
+
+    Returns:
+        None
+    """
+
+    if query == DEFAULT_QUERY:
+        click.echo(f'Defaulting to "{DEFAULT_QUERY}" since no query was provided.\n')
+    # 1. Read and process data
+    documents, ids = yt_data_read_process(
+        "../intake/data/YoutubeCommentsDataSet.csv",
+        1000,
+        "Comment",
+    )
+
+    # 2. Build / load collection and run query
+    results = chromadb_processing(
+        documents,
+        ids,
+        "YT_comments_new",
+        query,
+        result_num=n_results,
+    )
+
+    # 3. Display results
+    click.echo("Query results:")
+    click.echo(results.get("documents"))
+
+
+if __name__ == "__main__":
+    main()
