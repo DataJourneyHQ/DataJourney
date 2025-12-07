@@ -53,24 +53,24 @@ Each layer has a certain strength of communication inbuilt
 {✨= Experimental,
 ✅ = Implemented}
 
-| Status | Workflow Description                                                                                                                |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------|
-| ✅     | `Python Packaging framework` design principles                                                                                      |
-| ✅     | `GitHub actions` configured                                                                                                         |
-| ✅     | `Vale.sh` configured at PR level                                                                                                    |
-| ✅     | `Pre-commit hooks` configured for code linting/formatting                                                                           |
-| ✅     | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                |
-| ✅     | `Environment` management via [pixi](https://prefix.dev/)                                                                              |
-| ✅     | `Reading data` from online sources using [intake](https://github.com/intake/intake)                                                   |
-| ✅     | `Data pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                        |
-| ✅     | `custom Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) |
-| ✅     | `Exploratory data analysis` (EDA) using [mito](https://www.trymito.io/)                                                               |
-| ✅     | `Web UI` build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                |
-| ✅     | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                |
-| ✅     | `GenAI examples` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)          |
-| ✅     | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                            |
-| ✅     | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models` |
-| ✅     | `Prompt enhancer` powered by `gpt-oss-120b`|
+| Status | Workflow Description                                                                                                                     | Journey Type                          |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| ✅      | `Pre-commit hooks` configured for code linting/formatting                                                                                | Code Quality                  |
+| ✅      | `Exploratory data analysis` (EDA) using [mito](https://www.trymito.io/)                                                                  | EDA                           |
+| ✅      | `Environment` management via [pixi](https://prefix.dev/)                                                                                 | Environment Management        |
+| ✅      | `GenAI examples` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)                 | AI Data Analysis              |
+| ✅      | `custom Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) | Dashboarding                  |
+| ✅      | `Reading data` from online sources using [intake](https://github.com/intake/intake)                                                      | Data Ingestion                |
+| ✅      | `Data pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                             | Orchestration / Pipelines     |
+| ✅      | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                     | LLM Example                   |
+| ✅      | `Python Packaging framework` design principles                                                                                           | Packaging / Project Structure |
+| ✅      | `Prompt enhancer` powered by `gpt-oss-120b`                                                                                              | Prompt Engineering            |
+| ✅      | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models`                                                                            | RAG Pipeline                  |
+| ✅      | `GitHub actions` configured                                                                                                              | CI/CD                         |
+| ✅      | `Web UI` build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                   | Web Application               |
+| ✅      | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                   | Web Application               |
+| ✅      | `Vale.sh` configured at PR level                                                                                                         | Docs Linting                  |
+| ✅      | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                               | Vector Retrieval              |
 
 
 ### ☕️ Quickly getting started with DataJourney
