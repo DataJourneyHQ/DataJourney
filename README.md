@@ -71,6 +71,7 @@ Each layer has a certain strength of communication inbuilt
 | ✅      | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                   | Web Application               |
 | ✅      | `Vale.sh` configured at PR level                                                                                                         | Docs Linting                  |
 | ✅      | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                               | Vector Retrieval              |
+| ✅      | `LLM Evaluation & Tracing` for data analysis pipelines using [DeepEval](https://deepeval.com/docs/getting-started)                       | LLM Evaluation                | 
 
 
 ### ☕️ Quickly getting started with DataJourney
@@ -104,7 +105,21 @@ Each layer has a certain strength of communication inbuilt
 | `DJ_sync_dataset_trees`      | Downloads and synchronizes the `trees.csv` dataset into the project structure.                               |
 | `DJ_chromadb_gen_embedding`  | Query engine for LLM applications                                                                            |
 | `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
-| `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
+| `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b                                                    |
+
+
+### 🔄 Version Management
+
+DataJourney uses automated version syncing via GitHub Actions. When you push a release tag, the workflow automatically updates `setup.py` and `pixi.toml` versions and creates a PR.
+
+**Usage:**
+```bash
+# Create and push a release tag
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The workflow will automatically create a PR with version updates.
 
 
 ### 🔌 About pre-commit-hooks and activating

@@ -2,11 +2,16 @@
 Package manager for analytics_framework
 """
 
+import os
 from setuptools import find_packages, setup
+
+# Read version from environment variable with fallback
+#this is for if the workflow fails to pass the version
+RELEASE_VERSION = os.getenv("RELEASE_VERSION", "2.0.0")
 
 setup(
     name="analytics_framework",
-    version="2.0.0",
+    version=RELEASE_VERSION,
     author="sayantikabanik",
     description="Design first open source data management toolkit",
     long_description=open("README.md").read(),
