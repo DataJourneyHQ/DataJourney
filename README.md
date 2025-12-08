@@ -71,6 +71,7 @@ Each layer has a certain strength of communication inbuilt
 | ✅      | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                   | Web Application               |
 | ✅      | `Vale.sh` configured at PR level                                                                                                         | Docs Linting                  |
 | ✅      | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                               | Vector Retrieval              |
+| ✅      | `LLM Evaluation & Tracing` for data analysis pipelines using [DeepEval](https://deepeval.com/docs/getting-started)                       | LLM Evaluation                | 
 
 
 ### ☕️ Quickly getting started with DataJourney
