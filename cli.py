@@ -24,7 +24,7 @@ def list_workflows():
     table = Table(title="🚀 Available Workflows under DataJourney", show_lines=True, header_style="bold magenta")
 
     table.add_column("🔹 Task Name", style="bold cyan", justify="left")
-    table.add_column("📁 Path", style="bold green", justify="left")
+    table.add_column("📁 Source", style="bold green", justify="left")
 
     workflows = config.get("tasks", {})
 
