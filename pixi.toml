@@ -55,7 +55,7 @@ deepeval = "*"
 
 [tasks]
 # operations_DJ
-GIT_TOKEN_CHECK = { cmd = "python git_token_check.py" }
+GIT_TOKEN_CHECK = { cmd = "python -c \"import os,sys; t=os.getenv('GITHUB_TOKEN'); (print('❌ No GITHUB_TOKEN found.\\nLinux/Mac: export GITHUB_TOKEN=your_token_here\\nWindows PS: $env:GITHUB_TOKEN=\\\"your_token_here\\\"') or sys.exit(1)) if not t else print('✅ GITHUB_TOKEN is set.')\"" }
 DJ_package = { cmd = "pip install --editable . --use-pep517" }
 DJ_pre_commit = { cmd = "pre-commit install" }
 DJ_list = { cmd = "python cli.py"}
