@@ -55,7 +55,7 @@ deepeval = "*"
 
 [tasks]
 # operations_DJ
-GIT_TOKEN_CHECK = { cmd = "os.getenv(GITHUB_TOKEN)" }
+GIT_TOKEN_CHECK = { cmd = """bash -c 'if [ -n \"$GITHUB_TOKEN\" ]; then echo \"✓ GITHUB_TOKEN set\"; else echo \"✗ Token not present\"; exit 1; fi'""" }
 DJ_package = { cmd = "pip install --editable . --use-pep517" }
 DJ_pre_commit = { cmd = "pre-commit install" }
 DJ_list = { cmd = "python cli.py"}
