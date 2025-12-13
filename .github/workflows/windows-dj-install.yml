@@ -1,0 +1,16 @@
+name: windows-dj-install
+
+on: workflow_dispatch
+
+jobs:
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: prefix-dev/setup-pixi@v0.5.1
+        with:
+          version: "latest"
+
+      - name: Run pixi task
+        run: pixi run DJ_package
