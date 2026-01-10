@@ -1,0 +1,74 @@
+name: Release Version Sync
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to set (e.g., 1.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version from tag
+        id: get_version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            RELEASE_VERSION="${{ github.event.inputs.version }}"
+          else
+            RELEASE_VERSION=${GITHUB_REF#refs/tags/v}
+          fi
+          echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted version: $RELEASE_VERSION"
+
+      - name: Update setup.py
+        run: |
+          RELEASE_VERSION="${{ steps.get_version.outputs.RELEASE_VERSION }}"
+          sed -i "s/RELEASE_VERSION = os.getenv(\"RELEASE_VERSION\", \".*\")/RELEASE_VERSION = os.getenv(\"RELEASE_VERSION\", \"$RELEASE_VERSION\")/" setup.py
+          echo "Updated setup.py with version $RELEASE_VERSION"
+
+      - name: Update pixi.toml
+        run: |
+          RELEASE_VERSION="${{ steps.get_version.outputs.RELEASE_VERSION }}"
+          sed -i "s/^version = \".*\"/version = \"$RELEASE_VERSION\"/" pixi.toml
+          echo "Updated pixi.toml with version $RELEASE_VERSION"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code setup.py pixi.toml || echo "CHANGED=true" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.CHANGED == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: bump version to ${{ steps.get_version.outputs.RELEASE_VERSION }}"
+          title: "chore: Release version ${{ steps.get_version.outputs.RELEASE_VERSION }}"
+          body: |
+            Automated version update for release ${{ steps.get_version.outputs.RELEASE_VERSION }}
+            
+            This PR updates:
+            - setup.py default version
+            - pixi.toml project version
+            
+            Triggered by: ${{ github.event_name == 'workflow_dispatch' && 'Manual workflow dispatch' || format('Tag push: {0}', github.ref) }}
+          branch: release/v${{ steps.get_version.outputs.RELEASE_VERSION }}
+          base: main
+          labels: |
+            automated
+            release
