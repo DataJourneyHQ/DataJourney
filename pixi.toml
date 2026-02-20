@@ -52,6 +52,7 @@ azure-ai-inference = "*"
 mistralai = "*"
 langchain-deepseek = "*"
 deepeval = "*"
+google-adk = "*"
 
 [tasks]
 # operations_DJ
