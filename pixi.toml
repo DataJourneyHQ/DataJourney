@@ -41,6 +41,7 @@ tomlkit = ">=0.13.2,<0.14"
 chromadb = ">=1.0.12,<2"
 cyclonedx-bom = ">=6.1.2,<7"
 python-dotenv = ">=1.1.1,<2"
+google-adk = ">=1.3.0,<2"
 
 [pypi-dependencies]
 mitoinstaller = "*"
@@ -52,7 +53,6 @@ azure-ai-inference = "*"
 mistralai = "*"
 langchain-deepseek = "*"
 deepeval = "*"
-google-adk = "*"
 
 [tasks]
 # operations_DJ
@@ -78,3 +78,7 @@ DJ_chromadb_gen_embedding = { cmd = "python setup_chroma_vector_db.py", cwd = "a
 DJ_RAG_without_memory = { cmd = "python rag_without_context_memory.py", cwd = "analytics_framework/rag_system"}
 # gpt_oss
 DJ_prompt_enhancer = { cmd = "python prompt_enhancer_oss_gpt_120b.py", cwd = "analytics_framework/gpt_oss"}
+# 🤖 multi-agent system
+DJ_agent = { cmd = "python cli.py agent run", depends-on = ["DJ_package"] }
+DJ_agent_status = { cmd = "python cli.py agent status", depends-on = ["DJ_package"] }
+DJ_agent_ui = { cmd = "adk web", depends-on = ["DJ_package"], cwd = "analytics_framework/build_agents/orchestrator" }
