@@ -81,4 +81,5 @@ DJ_prompt_enhancer = { cmd = "python prompt_enhancer_oss_gpt_120b.py", cwd = "an
 # 🤖 multi-agent system
 DJ_agent = { cmd = "python cli.py agent run", depends-on = ["DJ_package"] }
 DJ_agent_status = { cmd = "python cli.py agent status", depends-on = ["DJ_package"] }
-DJ_agent_ui = { cmd = "adk web", depends-on = ["DJ_package"], cwd = "analytics_framework/build_agents/orchestrator" }
+DJ_agent_ui = { cmd = "adk web analytics_framework/build_agents", depends-on = ["DJ_package"] }
+DJ_agent_data = { cmd = "adk web analytics_framework/build_agents/agents", depends-on = ["DJ_package"] }
