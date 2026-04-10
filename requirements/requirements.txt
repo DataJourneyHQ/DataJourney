@@ -3,7 +3,7 @@
 # Use 'pixi run DJ_package' for development setup
 
 # Data processing and analysis
-intake==0.6.5
+intake==2.0.9
 pandas>=2.3.0,<3
 numpy>=1.26.4,<2
 scipy>=1.15.2,<2
