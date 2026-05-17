@@ -24,7 +24,7 @@ pytest>=8.4.1,<10
 
 # Data pipeline and orchestration
 dagster==1.13.1
-dagit==1.8.13
+dagit==1.13.1
 
 # Visualization
 hvplot>=0.11.3,<0.12
