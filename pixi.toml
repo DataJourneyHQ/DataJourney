@@ -80,3 +80,6 @@ DJ_prompt_enhancer = { cmd = "python prompt_enhancer_oss_gpt_120b.py", cwd = "an
 
 [tasks.DJ_list]
 cmd = "python cli.py list-workflows"
+
+[tasks.DJ_explain]
+cmd = "python cli.py explain"
