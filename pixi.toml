@@ -7,7 +7,7 @@ platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 version = "2.0.0"
 
 [dependencies]
-python = "3.10.*"
+python = "3.12.*"
 intake = "2.0.9.*"
 werkzeug = "2.2.2.*"
 pre-commit = ">=4.2.0,<5"
@@ -23,8 +23,8 @@ scikit-learn = ">=1.7.0,<2"
 statsmodels = ">=0.14.4,<0.15"
 urllib3 = ">=2.5.0,<3"
 hvplot = ">=0.11.3,<0.12"
-dagster = "1.8.13.*"
-dagit = "1.8.13.*"
+dagster = "1.12.14.*"
+dagit = "1.12.14.*"
 holoviews = ">=1.20.2,<2"
 aiohttp = ">=3.12.13,<4"
 python-fasthtml = ">=0.12.20,<0.13"
@@ -41,6 +41,7 @@ tomlkit = ">=0.13.2,<0.14"
 chromadb = ">=1.0.12,<2"
 cyclonedx-bom = ">=6.1.2,<7"
 python-dotenv = ">=1.1.1,<2"
+google-adk = ">=1.3.0,<2"
 
 [pypi-dependencies]
 mitoinstaller = "*"
@@ -58,7 +59,6 @@ deepeval = "*"
 GIT_TOKEN_CHECK = { cmd = """bash -c 'if [ -n \"$GITHUB_TOKEN\" ]; then echo \"✓ GITHUB_TOKEN set\"; else echo \"✗ Token not present\"; exit 1; fi'""" }
 DJ_package = { cmd = "pip install -e ." }
 DJ_pre_commit = { cmd = "pre-commit install" }
-DJ_list = { cmd = "python cli.py"}
 # applications
 DJ_dagster = { cmd = "dagit -f process.py", depends-on = "DJ_package", cwd = "analytics_framework/pipeline" }
 DJ_panel_app = { cmd = "python stock_price_twilio_app.py", depends-on = "DJ_package", cwd = "analytics_framework/dashboard" }
@@ -77,3 +77,9 @@ DJ_chromadb_gen_embedding = { cmd = "python setup_chroma_vector_db.py", cwd = "a
 DJ_RAG_without_memory = { cmd = "python rag_without_context_memory.py", cwd = "analytics_framework/rag_system"}
 # gpt_oss
 DJ_prompt_enhancer = { cmd = "python prompt_enhancer_oss_gpt_120b.py", cwd = "analytics_framework/gpt_oss"}
+
+[tasks.DJ_list]
+cmd = "python cli.py list-workflows"
+
+[tasks.DJ_explain]
+cmd = "python cli.py explain"

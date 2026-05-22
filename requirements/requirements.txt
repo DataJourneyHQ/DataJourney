@@ -20,10 +20,10 @@ urllib3>=2.5.0,<3
 
 # Development tools
 pre-commit>=4.2.0,<5
-pytest>=8.4.1,<9
+pytest>=8.4.1,<10
 
 # Data pipeline and orchestration
-dagster==1.8.13
+dagster==1.13.1
 dagit==1.8.13
 
 # Visualization
@@ -38,13 +38,13 @@ alembic>=1.13.3,<2
 datasets>=3.2.0,<4
 langchain-community>=0.3.24,<0.4
 langchain-anthropic>=0.3.1,<0.4
-langgraph>=0.2.60,<0.3
+langgraph>=0.2.60,<1.2
 transformers>=4.47.1,<5
-langchain-openai>=0.3.3,<0.4
+langchain-openai>=0.3.3,<1.2
 chromadb>=1.0.12,<2
 
 # Image processing
-pillow>=11.1.0,<12
+pillow>=11.1.0,<13
 
 # CLI and configuration
 rich-click>=1.8.6,<2

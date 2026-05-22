@@ -1,0 +1,25 @@
+extends: substitution
+message: "Use DataJourney docs style: replace '%s' with '%s'."
+level: suggestion
+ignorecase: false
+swap:
+  Datajourney: DataJourney
+  Data Journey: DataJourney
+  Github: GitHub
+  Github Actions: GitHub Actions
+  FastHtml: FastHTML
+  fastHTML: FastHTML
+  chromadb: ChromaDB
+  ChromaDb: ChromaDB
+  langchain: LangChain
+  dagster: Dagster
+  pixi: Pixi
+  revolutionary: specific
+  game-changing: useful
+  cutting-edge: current
+  world-class: high-quality
+  best-in-class: high-quality
+  supercharge: improve
+  simply: ""
+  obviously: ""
+  basically: ""

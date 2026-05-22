@@ -15,7 +15,16 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/DataJourneyHQ/DataJourney",
     packages=find_packages(),
+    py_modules=["cli"],
     include_package_data=True,
+    package_data={
+        "analytics_framework": ["workflows/*.json"],
+    },
+    entry_points={
+        "console_scripts": [
+            "datajourney=cli:cli",
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License"
