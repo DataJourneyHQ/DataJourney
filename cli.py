@@ -8,9 +8,7 @@ from analytics_framework import PACKAGE_LOC
 from analytics_framework.workflows.explain import (
     WorkflowCatalogError,
     filter_workflows_by_category,
-    filter_workflows_by_journey,
     get_workflows,
-    journeys_table,
     list_to_text,
     list_workflow_names,
     validate_workflow_catalog,
@@ -65,10 +63,9 @@ def list_workflows():
 @cli.command()
 @click.argument("workflow_name", required=False)
 @click.option("--list", "show_list", is_flag=True, help="Show a compact guide for all documented workflows.")
-@click.option("--journey", help="Show workflows for a specific journey.")
 @click.option("--category", help="Show workflows for a specific category.")
 @click.option("--validate", "show_validation", is_flag=True, help="Validate the workflow explanation catalog.")
-def explain(workflow_name, show_list, journey, category, show_validation):
+def explain(workflow_name, show_list, category, show_validation):
     """Explain what a DataJourney workflow does and why it matters."""
     try:
         if show_validation:
@@ -78,14 +75,6 @@ def explain(workflow_name, show_list, journey, category, show_validation):
                 console.print(list_to_text(errors))
                 raise click.Abort()
             console.print("[bold green]Workflow catalog looks good.[/bold green]")
-            return
-
-        if journey:
-            workflows = filter_workflows_by_journey(journey)
-            if not workflows:
-                console.print(f"[yellow]No workflows found for journey:[/yellow] {journey}")
-                return
-            console.print(workflow_table(workflows))
             return
 
         if category:
@@ -105,7 +94,6 @@ def explain(workflow_name, show_list, journey, category, show_validation):
             return
 
         console.print(workflow_overview_panel())
-        console.print(journeys_table())
     except WorkflowCatalogError as error:
         console.print(f"[bold red]{error}[/bold red]")
         suggestions = list_workflow_names()

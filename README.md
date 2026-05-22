@@ -1,161 +1,253 @@
 <h1 align="center">
 
-[![DataJourney Stats](https://img.shields.io/badge/DataJourney-Visitors-orange)](https://datajourneyhq.github.io/DataJourney/)\
+[![DataJourney Stats](https://img.shields.io/badge/DataJourney-Visitors-orange)](https://datajourneyhq.github.io/DataJourney/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11135/badge)](https://www.bestpractices.dev/projects/11135)
-[![Code of Conduct](https://img.shields.io/badge/Code_of_Conduct-Contributor%20Covenant-blue)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)\
+[![Code of Conduct](https://img.shields.io/badge/Code_of_Conduct-Contributor%20Covenant-blue)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)
 [![CI](https://github.com/sayantikabanik/DataJourney/actions/workflows/CI.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/CI.yml)
-[![github-repo-stats](https://github.com/sayantikabanik/DataJourney/actions/workflows/github-repo-stats.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/github-repo-stats.yml)
-[![Deploy DataJourney Stats](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/static.yml)
 [![Lint prose](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/review.yml)
-[![Monitor GitHub API Rate Limit](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml/badge.svg)](https://github.com/sayantikabanik/DataJourney/actions/workflows/rate-limit-monitor.yml)
 
 </h1>
 
-<!-- Funding spotlight -->
 <p align="center">
-  <b>Recipient: GitHub Secure Open Source Fund</b><br/>
-  <a href="https://github.com/sponsors/DataJourneyHQ"><b>💖 Sponsor DataJourneyHQ</b></a>
-  &nbsp;•&nbsp;
-  <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/"><b>🥁Official announcement</b></a>
+  <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DataJourney logo" width="420">
 </p>
 
 <p align="center">
-  <img src="./assets/DataJourney_logo_svg/dj_darkmode.svg" alt="DJ rocks" style="width:500px; height:600px;">
+  <b>Design AI-native data products with open-source building blocks.</b><br>
+  DataJourney teaches how data, AI, retrieval, dashboards, agents, evaluation, and packaging fit together as one usable system.
 </p>
 
+<p align="center">
+  <b>Recipient: GitHub Secure Open Source Fund</b><br>
+  <a href="https://github.com/sponsors/DataJourneyHQ"><b>Sponsor DataJourneyHQ</b></a>
+  &nbsp;|&nbsp;
+  <a href="https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/"><b>Official announcement</b></a>
+</p>
 
-### 🪶Short version
+## What Is DataJourney?
 
-A design-first open-source data management toolkit.\
-Understand the mechanics of **stitching** tools together into one cohesive, beautiful **system**.
+DataJourney is a design-first open-source toolkit for learning how to assemble AI-powered data products.
 
-### 🌲Long version
+Most data and AI examples teach one tool at a time. DataJourney focuses on the system around the tool: how data is discovered, profiled, retrieved, analyzed by models, turned into an interface, evaluated, and packaged so another person can actually use it.
 
-DataJourney is a design-first open-source data management toolkit that teaches you how to assemble cohesive data systems from individual components. 
+The project is both:
 
-Rather than prescribing specific tools, it demonstrates the mechanics of integration, demonstrating how to stitch together open-source technologies into scalable, reproducible workflows.
-With its modular, flexible design, DataJourney serves as both a learning resource and a practical toolkit for data professionals who want to grasp the art and science of building harmonious data systems.
+- a learning environment for understanding AI and data system design
+- a practical toolkit for composing open-source workflows into runnable examples
 
-### 🧱 Design Philosophy (LEGO)
-Built with additive, subtractive capabilities glued with open source.
-Each layer has a certain strength of communication inbuilt
+## Start With Explain
 
-- PO (Base): Static home(s) to keep it together `(GitHub)`
-- P1 (Tooling): Tooling, strings `(Powered by open source)`
-- P2 (Maintenance + Monitoring): Env, automations `(Pixi + GHA)`
-- P3 (Abstraction): Layer(s), CLI/task manager for users to interact with `(Pixi)`
+The first user-facing layer is the DataJourney CLI. It explains what each workflow does before you run it.
 
+<p align="center">
+  <img src="./assets/cli/datajourney_explain_overview.png" alt="DataJourney explain overview CLI output" width="900">
+</p>
 
-![DJ Design](assets/design/dj_vision.png)
-
-### 🛠 Current workflows covered
-{✨= Experimental,
-✅ = Implemented}
-
-| Status | Workflow Description                                                                                                                     | Journey Type                          |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| ✅      | `Pre-commit hooks` configured for code linting/formatting                                                                                | Code Quality                  |
-| ✅      | `Exploratory data analysis` (EDA) using [mito](https://www.trymito.io/)                                                                  | EDA                           |
-| ✅      | `Environment` management via [pixi](https://prefix.dev/)                                                                                 | Environment Management        |
-| ✅      | `GenAI examples` to analyse data [GitHub AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models)                 | AI Data Analysis              |
-| ✅      | `custom Dashboard` using [holoviews](https://holoviews.org/gallery/index.html) + [panel](https://panel.holoviz.org/reference/index.html) | Dashboarding                  |
-| ✅      | `Reading data` from online sources using [intake](https://github.com/intake/intake)                                                      | Data Ingestion                |
-| ✅      | `Data pipeline` built using [Dagster](https://github.com/dagster-io/dagster)                                                             | Orchestration / Pipelines     |
-| ✅      | `Hello world` LLM design example based on [LangChain](https://python.langchain.com/)                                                     | LLM Example                   |
-| ✅      | `Python Packaging framework` design principles                                                                                           | Packaging / Project Structure |
-| ✅      | `Prompt enhancer` powered by `gpt-oss-120b`                                                                                              | Prompt Engineering            |
-| ✅      | `RAG` powered by `langchain`, `chromadb` & `GitHub AI models`                                                                            | RAG Pipeline                  |
-| ✅      | `GitHub actions` configured                                                                                                              | CI/CD                         |
-| ✅      | `Web UI` build on [Flask](https://flask.palletsprojects.com/en/3.0.x/)                                                                   | Web Application               |
-| ✅      | `Web UI` re-done and expanded with [FastHTML](https://docs.fastht.ml/)                                                                   | Web Application               |
-| ✅      | `Vale.sh` configured at PR level                                                                                                         | Docs Linting                  |
-| ✅      | `Query engine` for LLM application using [Chromadb](https://docs.trychroma.com/docs/overview/introduction)                               | Vector Retrieval              |
-| ✅      | `LLM Evaluation & Tracing` for data analysis pipelines using [DeepEval](https://deepeval.com/docs/getting-started)                       | LLM Evaluation                | 
-
-
-### ☕️ Quickly getting started with DataJourney
-
-- Fork the repository
-- Generate & add `GITHUB_TOKEN`, instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
-    > Additional requirement to run **LLM based** workflows; Eg: DJ_prompt_enhancer, DJ_llm_analysis, others
-- Switch directory `cd DataJourney`
-- Download pixi : [prefix.dev](https://prefix.dev/)
-- Activate env: `pixi shell`
-- Install DJ framework locally `pixi run DJ_package`
-- List all the tasks: `pixi run DJ_list`
-- Execute a specific task from the list: `pixi run <TASK_NAME>`
-- Execute a specific task with additional logs: `pixi run -v <TASK_NAME>`
-
-### 🏃🏽‍♀️ Active `tasks` under DJ
-
-| **Task Name**                | **Description**                                                                                              |
-|------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `GIT_TOKEN_CHECK`            | Verifies the availability and validity of the Git authentication token.                                      |
-| `DJ_package`                 | Prepares and builds the Python package for the DataJourney project.                                          |
-| `DJ_pre_commit`              | Runs pre-commit hooks to ensure code quality and adherence to standards.                                     |
-| `DJ_dagster`                 | Sets up and runs a Dagster workflow for orchestration in the project.                                        |
-| `DJ_fasthtml_app`            | Executes a FastAPI-based HTML application.                                                                   |
-| `DJ_flask_app`               | Configures and runs a Flask-based application for data services.                                             |
-| `DJ_mito_app`                | Launches the Mito application for interactive data analysis in notebooks.                                    |
-| `DJ_panel_app`               | Executes a Panel dashboard app for data visualization and analytics.                                         |
-| `DJ_llm_analysis`            | Performs analysis using large language models (LLMs) on project data.                                        |
-| `DJ_hello_world_langchain`   | Sets up a basic LangChain app as a "Hello World" example for LLMs.                                           |
-| `DJ_spanish_eng_translation` | Performs Spanish to English translation with Deepseek-R1 (`NOTE`: Takes about ~30 secs to execute this task) |
-| `DJ_sync_dataset_trees`      | Downloads and synchronizes the `trees.csv` dataset into the project structure.                               |
-| `DJ_chromadb_gen_embedding`  | Query engine for LLM applications                                                                            |
-| `DJ_RAG_without_memory`      | End-to-end Retrieval-Augmented Generation (RAG) pipeline                                                     |
-| `DJ_prompt_enhancer`         | How to design a simple prompt enhancer using gpt-oss-120b |
-
-
-### 🔌 About pre-commit-hooks and activating
-Just like the name suggests, pre-commit-hooks are designed to format the code based on PEP standards before committing. [More details](https://pre-commit.com/)
+<p align="center">
+  <img src="./assets/cli/datajourney_explain.png" alt="DataJourney RAG workflow explanation CLI output" width="900">
+</p>
 
 ```shell
+pixi run DJ_explain
+```
+
+After installing the local package:
+
+```shell
+datajourney explain
+```
+
+Try the AI-first path:
+
+```shell
+datajourney explain DJ_RAG_without_memory
+datajourney explain --category RAG
+datajourney explain --list
+```
+
+The `explain` command answers the questions new users usually have:
+
+- What does this workflow do?
+- Why is it useful?
+- What prerequisites do I need?
+- What output should I expect?
+- What should I run next?
+
+## The Design Model
+
+DataJourney treats a data product as a set of connected design layers.
+
+<p align="center">
+  <img src="./assets/design/dj_vision.png" alt="DataJourney design vision" width="900">
+</p>
+
+## Design Philosophy
+
+DataJourney follows a LEGO-like design philosophy: small open-source capabilities should be understandable on their own, but more powerful when composed into a coherent system.
+
+The toolkit is built with additive and subtractive layers:
+
+- `P0 Base`: static homes and project anchors that keep the system visible, such as GitHub and documentation
+- `P1 Tooling`: open-source building blocks for data, AI, retrieval, apps, and dashboards
+- `P2 Maintenance`: environments, automation, quality checks, and monitoring through Pixi and GitHub Actions
+- `P3 Abstraction`: user-facing layers such as the CLI, task runner, workflow metadata, and agents
+
+Each layer should communicate clearly with the layer above it. That is the design goal: not just to run tools, but to make the system explainable, extensible, and beautiful to work with.
+
+| Layer | Purpose | DataJourney Examples |
+| --- | --- | --- |
+| Source | Bring data into a visible catalog | Intake, CSV datasets, source metadata |
+| Understanding | Inspect shape, schema, and meaning | profiling, EDA, dataset previews |
+| Intelligence | Add AI reasoning and retrieval | LLM analysis, RAG, ChromaDB, prompt enhancement |
+| Interface | Give users a surface to interact with | FastHTML, Flask, Panel dashboards, generated apps |
+| Orchestration | Make workflows repeatable | Pixi, Dagster, reusable tasks |
+| Evaluation | Check whether AI behavior is trustworthy | tracing and LLM evaluation examples |
+| Packaging | Make the system installable and explainable | CLI, `setup.py`, workflow metadata |
+
+The important idea: each workflow is not a random demo. It is a piece of a larger product journey.
+
+## Quick Start
+
+Fork or clone the repository, then enter the project:
+
+```shell
+cd DataJourney
+```
+
+Install Pixi from [prefix.dev](https://prefix.dev/), then activate the environment:
+
+```shell
+pixi shell
+```
+
+Install DataJourney locally:
+
+```shell
+pixi run DJ_package
+```
+
+Explore the toolkit:
+
+```shell
+pixi run DJ_explain
+pixi run DJ_explain -- DJ_RAG_without_memory
+pixi run DJ_explain -- --category RAG
+pixi run DJ_list
+```
+
+For model-backed workflows, configure a `GITHUB_TOKEN` or the relevant model-provider credentials before running AI tasks.
+
+```shell
+pixi run GIT_TOKEN_CHECK
+```
+
+## AI-First Example Path
+
+If you want to see DataJourney as an AI data-product toolkit, start here:
+
+```shell
+datajourney explain DJ_RAG_without_memory
+datajourney explain DJ_prompt_enhancer
+datajourney explain DJ_llm_analysis_gpt_4o
+```
+
+Then run the workflows when your credentials and prerequisites are ready:
+
+```shell
+pixi run DJ_chromadb_gen_embedding
+pixi run DJ_RAG_without_memory
+pixi run DJ_prompt_enhancer
+```
+
+This path shows the core design idea:
+
+1. prepare context
+2. retrieve relevant information
+3. ask a model to reason over grounded data
+4. turn the behavior into something explainable and reusable
+
+## Workflow Metadata
+
+The CLI is powered by one extensible JSON catalog:
+
+```text
+analytics_framework/workflows/workflow_catalog.json
+```
+
+Each workflow entry describes:
+
+- summary
+- benefit
+- design principle
+- command
+- prerequisites
+- expected output
+- common errors
+- next steps
+- related files
+
+Validate the catalog after editing it:
+
+```shell
+datajourney explain --validate
+```
+
+This makes DataJourney easier to extend because contributors can improve the user experience without changing workflow code.
+
+## Current Building Blocks
+
+DataJourney uses open-source tools as composable teaching material:
+
+| Capability | Tools |
+| --- | --- |
+| Environment and task running | Pixi |
+| Data catalog and ingestion | Intake |
+| Pipelines | Dagster |
+| Dashboards and apps | Panel, FastHTML, Flask |
+| AI and agent workflows | LangChain, Google ADK-style agents, GitHub Models |
+| Retrieval | ChromaDB |
+| Prompt design | GPT-OSS examples |
+| Evaluation and tracing | DeepEval examples |
+| Packaging and discovery | Click, Rich, `setup.py`, workflow metadata |
+
+## Repository Map
+
+```text
+analytics_framework/
+  ai_modeling/       LLM-backed analysis examples
+  build_agents/      DataJourney demo agents and agent tools
+  dashboard/         Panel dashboard examples
+  gpt_oss/           Prompt enhancement examples
+  intake/            Cataloged datasets and web UIs
+  pipeline/          Dagster pipeline example
+  rag_system/        ChromaDB and RAG examples
+  workflows/         CLI explanation metadata and utilities
+usage_guide/         Notebook-based learning guides
+assets/              Images used by docs and demos
+```
+
+## Contributing
+
+The easiest contribution path is improving the explanation layer.
+
+Good first contributions:
+
+- add clearer prerequisites for a workflow
+- add common errors and fixes
+- improve expected output descriptions
+- connect workflows with better next steps
+- improve workflow categories and descriptions
+
+Before opening a pull request, run:
+
+```shell
+datajourney explain --validate
 pixi run DJ_pre_commit
 ```
 
-### 🦭 Executing LLM script: Generate stock price recommendations
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md) before contributing.
 
-```shell
-pixi run DJ_llm_analysis
-```
+## License
 
-### 🪼 Execute pre-configured Dagster pipeline
-
-```shell
-pixi run DJ_dagster
-```
-![Dagit UI output](assets/pipeline/dagster_ui.png)
-
-### 🐙 Panel app
-```shell
-pixi run DJ_panel_app
-```
-
-*NOTE:*
-The dashboard generated is exported into HTML format and saved as [stock_price_twilio_dashboard](analytics_framework%2Fdashboard%2Fstock_price_twilio_dashboard.html)
-
-![Panel app output](assets/dashboard/panel_app_stock.png)
-
-### 🐵 Mito
-
-To explore further visit [trymito.io](https://docs.trymito.io/)
-```shell
-pixi run DJ_mito_app
-```
-
-[//]: # (![mito output]&#40;assets/pipeline/mito_graph.png "Graph generated via mitosheet"&#41; ![mito output operation]&#40;assets/pipeline/mito_operations.png "Operations performed via mitosheet"&#41;)
-
-<div style="display: flex; justify-content: space-between;">
-    <img src="assets/pipeline/mito_graph.png" alt="mito_output" width="400"/>
-    <img src="assets/pipeline/mito_operations.png" alt="mito_output" width="400"/>
-</div>
-
-### 🦋 Display all data sources present via web UI
-
-```shell
-# Run FastHTML app
-pixi run DJ_fasthtml_app
-```
-![data_sources_fasthtml.png](assets/pipeline/data_sources_fasthtml.png)
+DataJourney is licensed under the [Apache License 2.0](LICENSE).
