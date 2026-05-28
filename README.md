@@ -195,22 +195,6 @@ datajourney explain --validate
 
 This makes DataJourney easier to extend because contributors can improve the user experience without changing workflow code.
 
-## Current Building Blocks
-
-DataJourney uses open-source tools as composable teaching material:
-
-| Capability | Tools |
-| --- | --- |
-| Environment and task running | Pixi |
-| Data catalog and ingestion | Intake |
-| Pipelines | Dagster |
-| Dashboards and apps | Panel, FastHTML, Flask |
-| AI and agent workflows | LangChain, Google ADK-style agents, GitHub Models |
-| Retrieval | ChromaDB |
-| Prompt design | GPT-OSS examples |
-| Evaluation and tracing | DeepEval examples |
-| Packaging and discovery | Click, Rich, `setup.py`, workflow metadata |
-
 ## Repository Map
 
 ```text
