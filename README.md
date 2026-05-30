@@ -132,7 +132,7 @@ Explore the toolkit:
 ```shell
 pixi run DJ_explain
 pixi run DJ_explain -- DJ_RAG_without_memory
-pixi run DJ_explain -- --category RAG
+pixi run DJ_explain --category RAG
 pixi run DJ_list
 ```
 
