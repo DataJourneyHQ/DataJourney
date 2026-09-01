@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/DataJourneyHQ/DataJourney,31,8
+/DataJourneyHQ/DataJourney/discussions,3,1
+/DataJourneyHQ/DataJourney/commit/00c47e830e85b1486a3bc20ec8147f32a32f9124,2,2
+/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AI‐Aware),2,2
+/DataJourneyHQ/DataJourney/issues,2,1
+/DataJourneyHQ/DataJourney/pulls,2,1
+/DataJourneyHQ/DataJourney/blob/2b0707bb45055d3f87ee4667a490ec7593056127/.github/workflows/CI.yml,1,1
+/DataJourneyHQ/DataJourney/blob/main/.gitattributes,1,1
+/DataJourneyHQ/DataJourney/blob/main/.github/workflows/sbom-generator-cyclonedx.yml,1,1
+/DataJourneyHQ/DataJourney/blob/main/.vale.ini,1,1
