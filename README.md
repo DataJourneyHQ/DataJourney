@@ -15,7 +15,7 @@
 
 <p align="center">
   <b>Design AI-native data products with open-source building blocks.</b><br>
-  DataJourney teaches how data, AI, retrieval, dashboards, agents, evaluation, and packaging fit together as one usable system.
+  DataJourney teaches how data, AI and packaging fit together as one usable system.
 </p>
 
 <p align="center">
@@ -29,12 +29,43 @@
 
 DataJourney is a design-first open-source toolkit for learning how to assemble AI-powered data products.
 
-Most data and AI examples teach one tool at a time. DataJourney focuses on the system around the tool: how data is discovered, profiled, retrieved, analyzed by models, turned into an interface, evaluated, and packaged so another person can actually use it.
+Most data and AI examples teach one tool at a time. DataJourney focuses on the system around the tool: how data is discovered, profiled, retrieved, analysed by models, turned into an interface, evaluated, and packaged so someone else can actually use it.
 
 The project is both:
 
 - a learning environment for understanding AI and data system design
 - a practical toolkit for composing open-source workflows into runnable examples
+
+## The Design Model
+
+<p align="center">
+  <img src="./assets/design/dj_vision.png" alt="DataJourney design vision" width="900">
+</p>
+
+## Design Philosophy
+
+DataJourney follows a LEGO-like design philosophy: small open-source capabilities should be understandable on their own, but more powerful when composed into a coherent system.
+
+The toolkit is built with additive and subtractive layers:
+
+- `P0 Base`: static homes and project anchors that keep the system visible, such as GitHub and documentation
+- `P1 Tooling`: open-source building blocks for data, AI, retrieval, apps, and dashboards
+- `P2 Maintenance`: environments, automation, quality checks, and monitoring through Pixi and GitHub Actions
+- `P3 Abstraction`: user-facing layers such as the CLI, task runner, workflow metadata, and agents
+
+Each layer should communicate clearly with the layer above it. That is the design goal: not just to run tools, but to make the system explainable, extensible, and beautiful to work with.
+
+| Layer | Purpose | DataJourney Examples |
+| --- | --- | --- |
+| Source | Bring data into a visible catalog | Intake, CSV datasets, source metadata |
+| Understanding | Inspect shape, schema, and meaning | profiling, EDA, dataset previews |
+| Intelligence | Add AI reasoning and retrieval | LLM analysis, RAG, ChromaDB, prompt enhancement |
+| Interface | Give users a surface to interact with | FastHTML, Flask, Panel dashboards, generated apps |
+| Orchestration | Make workflows repeatable | Pixi, Dagster, reusable tasks |
+| Evaluation | Check whether AI behavior is trustworthy | tracing and LLM evaluation examples |
+| Packaging | Make the system installable and explainable | CLI, `setup.py`, workflow metadata |
+
+The important idea: each workflow is not a random demo. It's part of a larger product journey.
 
 ## Start With Explain
 
@@ -73,39 +104,6 @@ The `explain` command answers the questions new users usually have:
 - What prerequisites do I need?
 - What output should I expect?
 - What should I run next?
-
-## The Design Model
-
-DataJourney treats a data product as a set of connected design layers.
-
-<p align="center">
-  <img src="./assets/design/dj_vision.png" alt="DataJourney design vision" width="900">
-</p>
-
-## Design Philosophy
-
-DataJourney follows a LEGO-like design philosophy: small open-source capabilities should be understandable on their own, but more powerful when composed into a coherent system.
-
-The toolkit is built with additive and subtractive layers:
-
-- `P0 Base`: static homes and project anchors that keep the system visible, such as GitHub and documentation
-- `P1 Tooling`: open-source building blocks for data, AI, retrieval, apps, and dashboards
-- `P2 Maintenance`: environments, automation, quality checks, and monitoring through Pixi and GitHub Actions
-- `P3 Abstraction`: user-facing layers such as the CLI, task runner, workflow metadata, and agents
-
-Each layer should communicate clearly with the layer above it. That is the design goal: not just to run tools, but to make the system explainable, extensible, and beautiful to work with.
-
-| Layer | Purpose | DataJourney Examples |
-| --- | --- | --- |
-| Source | Bring data into a visible catalog | Intake, CSV datasets, source metadata |
-| Understanding | Inspect shape, schema, and meaning | profiling, EDA, dataset previews |
-| Intelligence | Add AI reasoning and retrieval | LLM analysis, RAG, ChromaDB, prompt enhancement |
-| Interface | Give users a surface to interact with | FastHTML, Flask, Panel dashboards, generated apps |
-| Orchestration | Make workflows repeatable | Pixi, Dagster, reusable tasks |
-| Evaluation | Check whether AI behavior is trustworthy | tracing and LLM evaluation examples |
-| Packaging | Make the system installable and explainable | CLI, `setup.py`, workflow metadata |
-
-The important idea: each workflow is not a random demo. It is a piece of a larger product journey.
 
 ## Quick Start
 
