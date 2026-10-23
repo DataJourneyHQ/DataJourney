@@ -17,6 +17,7 @@ werkzeug>=3.0.6
 aiohttp>=3.12.13,<4
 requests>=2.32.4,<3
 urllib3>=2.5.0,<3
+certifi>=2026.10.19
 
 # Development tools
 pre-commit>=4.2.0,<5

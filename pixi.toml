@@ -5,6 +5,7 @@ description = "Your Open-Source Data management framework"
 name = "datajourney"
 platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 version = "2.0.0"
+requires-pixi = ">=0.82.1"
 
 [dependencies]
 python = "3.12.*"
@@ -14,7 +15,8 @@ pre-commit = ">=4.2.0,<5"
 matplotlib = ">=3.10.3,<4"
 numpy = ">=1.26.4,<2"
 pandas = ">=2.3.0,<3"
-pip = ">=25.1.1,<26"
+pip = ">=26.2.2,<27"
+certifi = ">=2026.10.19"
 pytest = ">=8.4.1,<9"
 requests = ">=2.32.4,<3"
 seaborn = ">=0.13.2,<0.14"

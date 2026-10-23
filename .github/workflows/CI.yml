@@ -23,7 +23,7 @@ jobs:
       - name: Set up env with pixi goodness
         uses: prefix-dev/setup-pixi@v0.8.1
         with:
-          pixi-version: v0.40.3
+          pixi-version: v0.83.0
           cache: true
           cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       - run: pixi run DJ_package
