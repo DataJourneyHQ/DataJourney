@@ -45,7 +45,7 @@ langchain-openai>=1.0,<1.2
 chromadb>=1.0.12,<2
 
 # Image processing
-pillow>=11.1.0,<13
+pillow>=13.0.0,<14
 
 # CLI and configuration
 rich-click>=1.8.6,<2
